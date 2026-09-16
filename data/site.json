@@ -1,0 +1,1130 @@
+{
+  "topbar": {
+    "location": "Explore the World with Tour.com",
+    "timing": "Mon - Sat : 09:00 AM - 07:00 PM",
+    "phone": "+91 98765 43210",
+    "email": "info@tour.com"
+  },
+  "navbar": {
+    "logo": "/logo.png",
+    "links": [
+      {
+        "name": "Home",
+        "href": "/",
+        "active": true
+      },
+      {
+        "name": "About",
+        "href": "#",
+        "hasDropdown": true,
+        "dropdown": [
+          { "name": "About Us", "href": "/about-us" },
+          { "name": "Why Choose Us", "href": "/why-choose-us" },
+          { "name": "Mission & Vision", "href": "/mission-vision" },
+          { "name": "Our Team", "href": "/our-team" },
+          { "name": "Awards", "href": "/awards" }
+        ]
+      },
+      {
+        "name": "Destinations",
+        "href": "/destinations",
+        "hasDropdown": true
+      },
+      {
+        "name": "Tour Packages",
+        "href": "/packages",
+        "hasDropdown": true
+      },
+      {
+        "name": "Pages",
+        "href": "/pages",
+        "hasDropdown": true
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Contact Us",
+        "href": "/contact"
+      }
+    ],
+    "button": "Enquire Now"
+  },
+  "hero": {
+    "banners": [
+      "/banner/banner1.png",
+      "/banner/banner2.jpg",
+      "/banner/banner3.jpg"
+    ],
+    "cursiveText": "Experience Unmatched Delight With Us.",
+    "heading": "Where Exceptional Memories Begin",
+    "description": "Welcome to our Vitour website! We are a professional and reliable tours company that offers a wide range of printing services are many variations of passages."
+  },
+  "destinationsSection": {
+    "cursiveText": "Explore The World",
+    "headingPart1": "Top",
+    "headingPart2": "Destinations",
+    "description": "Discover breathtaking places around the globe and create unforgettable memories with Tour.com. Your next adventure awaits!",
+    "items": [
+      {
+        "name": "Maldives",
+        "image": "/TopDestination/Maldives.jpg",
+        "rotation": "-3deg",
+        "linkText": "Explore Destination"
+      },
+      {
+        "name": "Greece",
+        "image": "/TopDestination/Greece.jpg",
+        "rotation": "3deg",
+        "linkText": "Explore Destination"
+      },
+      {
+        "name": "Bali",
+        "image": "/TopDestination/Bali_View.jpg",
+        "rotation": "0deg",
+        "linkText": "Explore Destination"
+      },
+      {
+        "name": "Switzerland",
+        "image": "/TopDestination/Switzerland.jpg",
+        "rotation": "-3deg",
+        "linkText": "Explore Destination"
+      },
+      {
+        "name": "Dubai",
+        "image": "/TopDestination/Dubai.jpg",
+        "rotation": "3deg",
+        "linkText": "Explore Destination"
+      }
+    ],
+    "buttonText": "View All Destinations"
+  },
+  "popularToursSection": {
+    "cursiveText": "Explore The World",
+    "headingPart1": "Most Popular",
+    "headingPart2": "Tours",
+    "description": "Discover our most loved destinations, chosen by travelers around the world. Unforgettable experiences, amazing places, and memories for a lifetime.",
+    "items": [
+      {
+        "discount": "12% OFF",
+        "image": "/TopDestination/Maldives.jpg",
+        "title": "Maldives",
+        "price": "$ 1,299 USD",
+        "originalPrice": "$1,479 USD",
+        "rating": "5.0 (333)",
+        "duration": "5 Nights - 6 Days"
+      },
+      {
+        "discount": "10% OFF",
+        "image": "/TopDestination/Greece.jpg",
+        "title": "Greece",
+        "price": "$ 1,199 USD",
+        "originalPrice": "$1,399 USD",
+        "rating": "5.0 (333)",
+        "duration": "7 Nights - 8 Days"
+      },
+      {
+        "discount": "15% OFF",
+        "image": "/TopDestination/Bali_View.jpg",
+        "title": "Bali",
+        "price": "$ 899 USD",
+        "originalPrice": "$1,049 USD",
+        "rating": "5.0 (333)",
+        "duration": "6 Nights - 7 Days"
+      },
+      {
+        "discount": "10% OFF",
+        "image": "/TopDestination/Dubai.jpg",
+        "title": "Dubai",
+        "price": "$ 999 USD",
+        "originalPrice": "$1,149 USD",
+        "rating": "5.0 (333)",
+        "duration": "4 Nights - 5 Days"
+      },
+      {
+        "discount": "8% OFF",
+        "image": "/TopDestination/Switzerland.jpg",
+        "title": "Switzerland",
+        "price": "$ 1,499 USD",
+        "originalPrice": "$1,699 USD",
+        "rating": "4.9 (210)",
+        "duration": "6 Nights - 7 Days"
+      }
+    ]
+  },
+  "ourServicesSection": {
+    "cursiveText": "What We Offer",
+    "headingPart1": "Our",
+    "headingPart2": "Services",
+    "description": "From flights to full travel experiences, we provide everything you need for a smooth, safe, and unforgettable journey.",
+    "items": [
+      {
+        "icon": "Plane",
+        "image": "/services_tour/flight.jpg",
+        "title": "Flight Booking",
+        "description": "Book domestic and international flights at the best prices.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "Building",
+        "image": "/services_tour/hotel.jpg",
+        "title": "Hotel Booking",
+        "description": "Comfortable stays for every budget and every destination.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "Map",
+        "image": "/services_tour/map.jpg",
+        "title": "Tour Packages",
+        "description": "Curated tour packages for family, couples and groups.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "Bus",
+        "image": "/services_tour/travel.jpg",
+        "title": "Transport Services",
+        "description": "Reliable airport transfers and local transport for your convenience.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "FileText",
+        "image": "/services_tour/visa.jpg",
+        "title": "Visa Assistance",
+        "description": "Hassle-free visa support for your international travel.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "ShieldCheck",
+        "image": "/services_tour/insurance.jpg",
+        "title": "Travel Insurance",
+        "description": "Travel with peace of mind and complete protection.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "Compass",
+        "image": "/services_tour/guide.jpg",
+        "title": "Travel Guide",
+        "description": "Expert guidance to help you explore the best places.",
+        "linkText": "Learn More"
+      },
+      {
+        "icon": "Headphones",
+        "image": "/services_tour/support.jpg",
+        "title": "24/7 Support",
+        "description": "We are here to assist you anytime, anywhere.",
+        "linkText": "Learn More"
+      }
+    ]
+  },
+  "whyChooseUsSection": {
+    "cursiveText": "Why Choose Us",
+    "headingPart1": "We Are Always Ready To Take",
+    "headingPart2": "Challenge",
+    "description": "At Tour.com, we believe in the transformative power of travel. As avid explorers ourselves, we understand the desire to uncover new places, cultures, and experiences that enrich life.",
+    "features": [
+      {
+        "title": "Safe and Secure Travel",
+        "description": "Your safety is our priority at every step of your journey."
+      },
+      {
+        "title": "Family-Friendly Hotels",
+        "description": "Handpicked stays for a comfortable and memorable trip."
+      },
+      {
+        "title": "Guided Service",
+        "description": "Expert local guides to make your travel more meaningful."
+      },
+      {
+        "title": "24/7 Customer Care",
+        "description": "We are here to assist you anytime, anywhere in your journey."
+      }
+    ],
+    "buttonText": "More About Us",
+    "image1": "/whychoose_tour/img1.jpg",
+    "image2": "/whychoose_tour/img2.jpg",
+    "image3": "/whychoose_tour/img3.jpg",
+    "image2Text1": "Good",
+    "image2Text2": "Places",
+    "image2Text3": "Brighter",
+    "image2Text4": "People"
+  },
+  "aboutUsSection": {
+    "cursiveText": "About Us",
+    "headingPart1": "Creating Journeys",
+    "headingPart2": "Beyond",
+    "headingPart3": "Destinations",
+    "description": "At Tour.com, we believe travel is more than just visiting new places — it's about creating memories that last a lifetime. With a passion for exploration and a commitment to excellence, we curate exceptional travel experiences that bring people, places, and cultures closer together.",
+    "features": [
+      {
+        "title": "Expert Guidance",
+        "description": "Travel with experienced professionals.",
+        "icon": "Users"
+      },
+      {
+        "title": "Customized Tours",
+        "description": "Trips designed around your dreams.",
+        "icon": "Award"
+      },
+      {
+        "title": "Trusted Worldwide",
+        "description": "A growing community of happy travelers.",
+        "icon": "Handshake"
+      },
+      {
+        "title": "Memorable Experiences",
+        "description": "Journeys that stay with you forever.",
+        "icon": "Globe"
+      }
+    ],
+    "buttonText": "More About Us",
+    "mainImage": "/AboutUs/AboutUs_main.jpg",
+    "smallImage": "/AboutUs/AboutUs_sec.jpg"
+  },
+  "missionVisionSection": {
+    "mission": {
+      "preTitle": "OUR MISSION",
+      "titlePart1": "Creating Meaningful",
+      "titlePart2": "Travel Experiences",
+      "description": "Our mission is to make travel simple, accessible, and unforgettable for everyone. We strive to provide reliable information, personalized guidance, and exceptional support to help travelers explore the world with confidence.",
+      "smallText1": "PEOPLE",
+      "smallText2": "PLACES",
+      "smallText3": "POSSIBILITIES",
+      "cursiveText": "Mission",
+      "image": "/mission-vision/mission.jpg"
+    },
+    "vision": {
+      "preTitle": "OUR VISION",
+      "titlePart1": "A More Connected",
+      "titlePart2": "and Inspired World",
+      "description": "Our vision is to be a trusted travel platform that inspires people to explore new places, embrace different cultures, and build a more connected world. We aim to create a community of travelers who see travel as a way to learn, grow, and make a positive impact.",
+      "smallText1": "BIGGER",
+      "smallText2": "BRIGHTER",
+      "smallText3": "BOLDER",
+      "cursiveText": "Vision",
+      "image": "/mission-vision/vision.jpg"
+    }
+  },
+  "awardsSection": {
+    "preTitle": "OUR ACHIEVEMENTS",
+    "titlePart1": "Awards &",
+    "titlePart2": "Recognition",
+    "description": "A reflection of the trust, support, and love we receive from travelers and industry experts.",
+    "bottomText": "EXPLORING A BRIGHTER TOMORROW",
+    "items": [
+      {
+        "year": "2024",
+        "title": "Global Travel Excellence Award",
+        "description": "For outstanding contribution to the travel and tourism industry.",
+        "image": ""
+      },
+      {
+        "year": "2023",
+        "title": "Customer Choice Award",
+        "description": "Recognized for exceptional customer service and satisfaction.",
+        "image": ""
+      },
+      {
+        "year": "2023",
+        "title": "Sustainable Tourism Leadership",
+        "description": "For promoting responsible travel and sustainable tourism practices.",
+        "image": ""
+      },
+      {
+        "year": "2022",
+        "title": "Best Travel Agency",
+        "description": "Honored for innovation, reliability, and delivering unforgettable travel experiences.",
+        "image": ""
+      },
+      {
+        "year": "2021",
+        "title": "Travel Innovation Award",
+        "description": "For embracing technology and creating smarter travel solutions.",
+        "image": ""
+      },
+      {
+        "year": "2021",
+        "title": "Adventure Travel Award",
+        "description": "For inspiring more people to explore the world beyond the ordinary.",
+        "image": ""
+      },
+      {
+        "year": "2020",
+        "title": "Responsible Travel Champion",
+        "description": "For dedication to ethical travel and positive community impact.",
+        "image": ""
+      },
+      {
+        "year": "2019",
+        "title": "Travelers' Trust Award",
+        "description": "For being a trusted travel partner for millions of happy travelers.",
+        "image": ""
+      }
+    ]
+  },
+  "teamSection": {
+    "preTitle": "Our Team",
+    "titlePart1": "Meet Our",
+    "titlePart2": "Expert Team",
+    "description": "A passionate group of travel experts dedicated to creating unforgettable experiences for you.",
+    "items": [
+      {
+        "name": "Sarah Khan",
+        "designation": "Chief Executive Officer",
+        "image": "/Team_Tour/1.webp",
+        "slug": "sarah-khan",
+        "details": {
+          "image": "/Team_Tour/1.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "CHIEF EXECUTIVE OFFICER",
+          "namePart1": "Sarah",
+          "namePart2": "Khan",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Rahul Mehta",
+        "designation": "Head of Operations",
+        "image": "/Team_Tour/02.webp",
+        "slug": "rahul-mehta",
+        "details": {
+          "image": "/Team_Tour/02.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "HEAD OF OPERATIONS",
+          "namePart1": "Rahul",
+          "namePart2": "Mehta",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Priya Sharma",
+        "designation": "Travel Consultant",
+        "image": "/Team_Tour/03.webp",
+        "slug": "priya-sharma",
+        "details": {
+          "image": "/Team_Tour/03.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "TRAVEL CONSULTANT",
+          "namePart1": "Priya",
+          "namePart2": "Sharma",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Arjun Verma",
+        "designation": "Customer Success Manager",
+        "image": "/Team_Tour/04.webp",
+        "slug": "arjun-verma",
+        "details": {
+          "image": "/Team_Tour/04.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "CUSTOMER SUCCESS MANAGER",
+          "namePart1": "Arjun",
+          "namePart2": "Verma",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Neha Kapoor",
+        "designation": "Marketing Manager",
+        "image": "/Team_Tour/1.webp",
+        "slug": "neha-kapoor",
+        "details": {
+          "image": "/Team_Tour/1.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "MARKETING MANAGER",
+          "namePart1": "Neha",
+          "namePart2": "Kapoor",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Vikram Singh",
+        "designation": "Product Manager",
+        "image": "/Team_Tour/02.webp",
+        "slug": "vikram-singh",
+        "details": {
+          "image": "/Team_Tour/02.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "PRODUCT MANAGER",
+          "namePart1": "Vikram",
+          "namePart2": "Singh",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ananya Rao",
+        "designation": "Travel Support Specialist",
+        "image": "/Team_Tour/03.webp",
+        "slug": "ananya-rao",
+        "details": {
+          "image": "/Team_Tour/03.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "TRAVEL SUPPORT SPECIALIST",
+          "namePart1": "Ananya",
+          "namePart2": "Rao",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Karan Malhotra",
+        "designation": "IT & Technology Lead",
+        "image": "/Team_Tour/04.webp",
+        "slug": "karan-malhotra",
+        "details": {
+          "image": "/Team_Tour/04.webp",
+          "quote": "Travel is not just about places, it's about people and the stories we create together.",
+          "designation": "IT & TECHNOLOGY LEAD",
+          "namePart1": "Karan",
+          "namePart2": "Malhotra",
+          "subtitle": "Leading with a vision to make travel more meaningful.",
+          "paragraphs": [
+            "Sarah Khan is the Chief Executive Officer at TravelX, bringing over 12 years of experience in the travel and hospitality industry. Her passion for exploration and commitment to exceptional customer experiences have been instrumental in shaping our mission and growth.",
+            "Under her leadership, TravelX has expanded its global presence, built strong partnerships, and introduced innovative travel solutions that inspire people to explore the world with confidence."
+          ],
+          "social": {
+            "linkedin": "#",
+            "instagram": "#",
+            "facebook": "#"
+          },
+          "contact": {
+            "email": "sarah@travelx.com",
+            "phone": "+91 98765 43210",
+            "location": "New Delhi, India"
+          },
+          "expertise": {
+            "title": "Areas of Expertise",
+            "skills": [
+              "Strategic Leadership",
+              "Business Development",
+              "Customer Experience",
+              "Global Partnerships",
+              "Sustainable Tourism"
+            ]
+          },
+          "stats": [
+            {
+              "icon": "globe",
+              "value": "12+",
+              "label": "Years of Experience"
+            },
+            {
+              "icon": "users",
+              "value": "50+",
+              "label": "Global Partners"
+            },
+            {
+              "icon": "map-pin",
+              "value": "100+",
+              "label": "Destinations Covered"
+            }
+          ],
+          "education": {
+            "title": "Education",
+            "degree": "MBA in International Business",
+            "institution": "London Business School, UK",
+            "years": "2010 - 2012"
+          },
+          "certifications": {
+            "title": "Certifications",
+            "items": [
+              "Certified Travel & Tourism Professional",
+              "Sustainable Tourism Leadership Program"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "testimonialSection": {
+    "cursiveText": "Testimonial",
+    "headingPart1": "What Our",
+    "headingPart2": "Clients Say",
+    "items": [
+      {
+        "image": "/Testimonial_tour/img1.png",
+        "name": "Emily Watson",
+        "title": "Adventure Seeker",
+        "quote": "The best travel agency I've ever worked with! The itinerary was flawless.",
+        "rating": 5
+      },
+      {
+        "image": "/Testimonial_tour/img4.png",
+        "name": "Michael Brown",
+        "title": "Business Traveler",
+        "quote": "Professional, efficient, and highly reliable. They handle all my corporate trips.",
+        "rating": 4
+      },
+      {
+        "image": "/Testimonial_tour/img2.png",
+        "name": "Sarah Mitchell",
+        "title": "Travel Enthusiast",
+        "quote": "Working with this travel platform has been an amazing experience. The team planned everything perfectly, from hotels to local experiences. Our trip was smooth, well-organized, and truly memorable. Highly recommended for anyone who loves to explore the world!",
+        "rating": 5
+      },
+      {
+        "image": "/Testimonial_tour/img5.png",
+        "name": "David Clark",
+        "title": "Photographer",
+        "quote": "Found the most picturesque locations thanks to their amazing recommendations.",
+        "rating": 5
+      },
+      {
+        "image": "/Testimonial_tour/img3.png",
+        "name": "Jessica Lee",
+        "title": "Family Traveler",
+        "quote": "They made our family vacation stress-free and enjoyable for everyone.",
+        "rating": 5
+      }
+    ]
+  },
+  "statsSection": {
+    "cursiveText": "Our Journey in Numbers",
+    "headingPart1": "Creating",
+    "headingPart2": "Unforgettable",
+    "headingPart3": "Journeys",
+    "description": "From dream destinations to happy travelers, our numbers tell a story of trust, experiences, and endless exploration.",
+    "backgroundImage": "",
+    "stats": [
+      {
+        "number": 10,
+        "suffix": "K+",
+        "label": "Happy Travelers"
+      },
+      {
+        "number": 250,
+        "suffix": "+",
+        "label": "Amazing Destinations"
+      },
+      {
+        "number": 8,
+        "suffix": "+",
+        "label": "Years of Experience"
+      },
+      {
+        "number": 4.8,
+        "isDecimal": true,
+        "suffix": "/5",
+        "label": "Customer Satisfaction"
+      }
+    ]
+  },
+  "blogSection": {
+    "cursiveText": "Our Blog",
+    "headingPart1": "Latest",
+    "headingPart2": "Travel Stories",
+    "description": "Tips, guides and inspiring stories to fuel your next adventure.",
+    "items": [
+      {
+        "image": "/Our_blogs/img3.jpg",
+        "date": "12 Aug 2026",
+        "category": "Travel Tips",
+        "title": "10 Essential Travel Tips for First-Time Travelers",
+        "description": "Planning your first trip? Here are 10 must-know tips to make your journey smooth, safe, and memorable."
+      },
+      {
+        "image": "/Our_blogs/img1.jpg",
+        "date": "08 Aug 2026",
+        "category": "Destinations",
+        "title": "Top 5 Beach Destinations You Must Visit in 2026",
+        "description": "From crystal-clear waters to stunning sunsets, explore the best beach destinations for your next vacation."
+      },
+      {
+        "image": "/Our_blogs/img2.jpg",
+        "date": "04 Aug 2026",
+        "category": "Travel Guide",
+        "title": "The Ultimate Packing Guide for Hassle-Free Travel",
+        "description": "Pack smart and travel light! Discover essential items, packing hacks, and expert tips for your next trip."
+      }
+    ]
+  },
+  "footer": {
+    "backgroundImage": "/footer.png",
+    "description": "At Tour.com, we believe travel is more than just visiting new places - it's about creating memories that last a lifetime. Let us be your travel companion in exploring the world.",
+    "cursiveText": "Explore Dream Discover",
+    "quickLinks": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "About Us",
+        "href": "/about"
+      },
+      {
+        "name": "Destinations",
+        "href": "/destinations"
+      },
+      {
+        "name": "Tour Packages",
+        "href": "/packages"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Contact Us",
+        "href": "/contact"
+      }
+    ],
+    "services": [
+      {
+        "name": "Domestic Tours",
+        "href": "#"
+      },
+      {
+        "name": "International Tours",
+        "href": "#"
+      },
+      {
+        "name": "Custom Packages",
+        "href": "#"
+      },
+      {
+        "name": "Group Tours",
+        "href": "#"
+      },
+      {
+        "name": "Honeymoon Packages",
+        "href": "#"
+      },
+      {
+        "name": "Travel Assistance",
+        "href": "#"
+      }
+    ],
+    "destinations": [
+      {
+        "name": "Bali",
+        "href": "#"
+      },
+      {
+        "name": "Dubai",
+        "href": "#"
+      },
+      {
+        "name": "Singapore",
+        "href": "#"
+      },
+      {
+        "name": "Thailand",
+        "href": "#"
+      },
+      {
+        "name": "Europe",
+        "href": "#"
+      },
+      {
+        "name": "Maldives",
+        "href": "#"
+      }
+    ],
+    "contact": {
+      "phone": "+91 98765 43210",
+      "timing": "Mon - Sat : 09:00 AM - 07:00 PM",
+      "email": "info@tour.com",
+      "emailSub": "We reply within 24 hours",
+      "address": "123 Travel Street, Connaught Place, New Delhi - 110001, India"
+    },
+    "bottomBar": {
+      "copyright": "© 2026 Tour.com. All Rights Reserved.",
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "href": "#"
+        },
+        {
+          "name": "Terms & Conditions",
+          "href": "#"
+        },
+        {
+          "name": "Cancellation Policy",
+          "href": "#"
+        },
+        {
+          "name": "Sitemap",
+          "href": "#"
+        }
+      ]
+    }
+  }
+}
