@@ -18,7 +18,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
 
   // Pass the enriched details payload to the TeamDetail component
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-white overflow-x-hidden">
+    <div className="flex flex-col min-h-screen font-sans bg-white overflow-x-clip">
       <Navbar />
       <PageBanner title="Team Detail" />
       <TeamDetail member={memberData.details} />

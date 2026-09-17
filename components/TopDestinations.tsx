@@ -64,9 +64,12 @@ export default function TopDestinations() {
 
         {/* Button */}
         <div className="flex justify-center">
-          <button className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-8 py-3.5 rounded-full font-medium transition-colors flex items-center gap-2 shadow-md">
+          <Link
+            href="/destinations"
+            className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-8 py-3.5 rounded-full font-medium transition-colors flex items-center gap-2 shadow-md"
+          >
             {siteData.destinationsSection.buttonText} <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

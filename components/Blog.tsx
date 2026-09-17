@@ -76,7 +76,7 @@ export default function Blog() {
 
                 {/* Title & Description */}
                 <h3 className="text-xl md:text-2xl font-bold text-[#0d2a4c] mb-3 group-hover:text-[#008cba] transition-colors line-clamp-2">
-                  <Link href="#">{item.title}</Link>
+                  <Link href={`/blog/${item.slug}`}>{item.title}</Link>
                 </h3>
                 <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-6 line-clamp-3 flex-grow">
                   {item.description}
@@ -84,7 +84,7 @@ export default function Blog() {
 
                 {/* Footer link */}
                 <div className="mt-auto">
-                  <Link href="#" className="inline-flex items-center font-bold text-[#008cba] hover:text-[#005580] transition-colors group/link">
+                  <Link href={`/blog/${item.slug}`} className="inline-flex items-center font-bold text-[#008cba] hover:text-[#005580] transition-colors group/link">
                     Read More 
                     <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
                   </Link>

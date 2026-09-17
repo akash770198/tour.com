@@ -8,7 +8,7 @@ export default function Navbar() {
   const { topbar, navbar } = siteData;
 
   return (
-    <>
+    <header className="sticky top-0 z-50 w-full">
       {/* TopBar */}
       <div className="hidden lg:flex w-full bg-[#2f5c97] text-white text-sm h-12">
         <div className="container mx-auto px-4 flex justify-between items-center h-full max-w-[1340px]">
@@ -47,7 +47,7 @@ export default function Navbar() {
       </div>
 
       {/* NavBar */}
-      <nav className="w-full bg-white text-gray-800 py-4 shadow-sm z-50 sticky top-0">
+      <nav className="w-full bg-white text-gray-800 py-4 shadow-sm">
         <div className="container mx-auto px-4 flex justify-between items-center max-w-[1340px]">
           <div className="flex-shrink-0">
             <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
@@ -90,6 +90,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </>
+    </header>
   );
 }

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -80,7 +80,7 @@ export default function OurServices() {
                 <h3 className="text-xl font-bold text-[#0d2a4c] mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-sm mb-6 flex-1">{item.description}</p>
                 
-                <Link href="#" className="flex items-center justify-between group">
+                <Link href={"href" in item && item.href ? item.href : "#"} className="flex items-center justify-between group">
                   <span className="text-sm font-semibold text-[#008cba] group-hover:text-[#007ba3] transition-colors">{item.linkText}</span>
                   <div className="w-8 h-8 rounded-full bg-[#e3f4f8] flex items-center justify-center text-[#008cba] group-hover:bg-[#008cba] group-hover:text-white transition-colors">
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
