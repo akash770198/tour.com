@@ -66,6 +66,10 @@
             "href": "/gallery"
           },
           {
+            "name": "Partners",
+            "href": "/partners"
+          },
+          {
             "name": "Testimonials",
             "href": "/testimonials"
           },
@@ -1586,7 +1590,7 @@
       },
       {
         "name": "About Us",
-        "href": "/about"
+        "href": "/about-us"
       },
       {
         "name": "Destinations",
@@ -1607,54 +1611,81 @@
     ],
     "services": [
       {
-        "name": "Domestic Tours",
-        "href": "#"
+        "name": "Flight Booking",
+        "href": "/services/flight-booking"
       },
       {
-        "name": "International Tours",
-        "href": "#"
+        "name": "Hotel Booking",
+        "href": "/services/hotel-booking"
       },
       {
-        "name": "Custom Packages",
-        "href": "#"
+        "name": "Tour Packages",
+        "href": "/services/tour-packages"
       },
       {
-        "name": "Group Tours",
-        "href": "#"
+        "name": "Visa Assistance",
+        "href": "/services/visa-assistance"
       },
       {
-        "name": "Honeymoon Packages",
-        "href": "#"
+        "name": "Travel Insurance",
+        "href": "/services/travel-insurance"
       },
       {
-        "name": "Travel Assistance",
-        "href": "#"
+        "name": "24/7 Support",
+        "href": "/services/247-support"
       }
     ],
     "destinations": [
       {
         "name": "Bali",
-        "href": "#"
+        "href": "/packages?destination=Indonesia"
       },
       {
         "name": "Dubai",
-        "href": "#"
+        "href": "/packages?destination=UAE"
       },
       {
-        "name": "Singapore",
-        "href": "#"
+        "name": "Switzerland",
+        "href": "/packages?destination=Switzerland"
       },
       {
         "name": "Thailand",
-        "href": "#"
+        "href": "/packages?destination=Thailand"
       },
       {
         "name": "Europe",
-        "href": "#"
+        "href": "/packages?destination=Multiple%20Cities"
       },
       {
         "name": "Maldives",
-        "href": "#"
+        "href": "/packages?destination=Maldives"
+      }
+    ],
+    "social": [
+      {
+        "name": "Facebook",
+        "icon": "facebook",
+        "href": "https://www.facebook.com/"
+      },
+      {
+        "name": "Instagram",
+        "icon": "instagram",
+        "href": "https://www.instagram.com/"
+      },
+      {
+        "name": "Twitter",
+        "icon": "twitter",
+        "href": "https://twitter.com/"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "href": "https://www.linkedin.com/"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "href": "https://www.youtube.com/"
       }
     ],
     "contact": {
@@ -1662,26 +1693,27 @@
       "timing": "Mon - Sat : 09:00 AM - 07:00 PM",
       "email": "info@tour.com",
       "emailSub": "We reply within 24 hours",
-      "address": "123 Travel Street, Connaught Place, New Delhi - 110001, India"
+      "address": "123 Travel Street, Connaught Place, New Delhi - 110001, India",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi+110001"
     },
     "bottomBar": {
       "copyright": "© 2026 Tour.com. All Rights Reserved.",
       "links": [
         {
           "name": "Privacy Policy",
-          "href": "#"
+          "href": "/privacy-policy"
         },
         {
           "name": "Terms & Conditions",
-          "href": "#"
+          "href": "/privacy-policy"
         },
         {
           "name": "Cancellation Policy",
-          "href": "#"
+          "href": "/privacy-policy"
         },
         {
           "name": "Sitemap",
-          "href": "#"
+          "href": "/sitemap"
         }
       ]
     }
@@ -5817,5 +5849,239 @@
         "href": "/contact"
       }
     }
+  },
+  "partnersPage": {
+    "bannerTitle": "Partners",
+    "label": "Our Partners",
+    "headingPart1": "Trusted Partners,",
+    "headingPart2": "Better Journeys",
+    "description": "We collaborate with leading travel brands, tourism boards and service providers to bring you seamless and memorable travel experiences.",
+    "items": [
+      { "name": "Emirates", "logo": "/partners/emirates.jpg" },
+      { "name": "Qatar Airways", "logo": "/partners/qatar.jpg" },
+      { "name": "Singapore Airlines", "logo": "/partners/singapur.jpg" },
+      { "name": "Turkish Airlines", "logo": "/partners/turkish.jpg" },
+      { "name": "British Airways", "logo": "/partners/british.jpg" },
+      { "name": "Thai Airways", "logo": "/partners/thai.jpg" },
+      { "name": "Malaysia Airlines", "logo": "/partners/malasia.jpg" },
+      { "name": "Vistara", "logo": "/partners/vistara.jpg" },
+      { "name": "IndiGo", "logo": "/partners/indogo.jpg" },
+      { "name": "Air India", "logo": "/partners/india.jpg" },
+      { "name": "SpiceJet", "logo": "/partners/spicejet.jpg" },
+      { "name": "Akasa Air", "logo": "/partners/akasa.jpg" }
+    ]
+  },
+  "contactPage": {
+    "bannerTitle": "Contact Us",
+    "infoCards": [
+      {
+        "icon": "Phone",
+        "title": "Call Us",
+        "line1": "+91 98765 43210",
+        "line2": "Mon - Sat, 9:00 AM - 6:00 PM",
+        "href": "tel:+919876543210",
+        "tone": "blue"
+      },
+      {
+        "icon": "Mail",
+        "title": "Email Us",
+        "line1": "info@tour.com",
+        "line2": "We reply within 24 hours",
+        "href": "mailto:info@tour.com",
+        "tone": "purple"
+      },
+      {
+        "icon": "MapPin",
+        "title": "Visit Our Office",
+        "line1": "123 Travel Street, Connaught Place,",
+        "line2": "New Delhi - 110001, India",
+        "href": "#office",
+        "tone": "blue"
+      },
+      {
+        "icon": "Headphones",
+        "title": "Get Support",
+        "line1": "For bookings, cancellations",
+        "line2": "or any other help",
+        "href": "#contact-form",
+        "tone": "purple"
+      }
+    ],
+    "form": {
+      "label": "Send Us a Message",
+      "headingPart1": "Let's Plan Your",
+      "headingPart2": "Next Trip",
+      "description": "Fill out the form and our travel experts will get back to you shortly.",
+      "fields": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "message": "Your Message"
+      },
+      "subjectPlaceholder": "Select a subject",
+      "subjects": [
+        "General Enquiry",
+        "Tour Package Booking",
+        "Custom Itinerary",
+        "Group Travel",
+        "Cancellation / Support",
+        "Partnership"
+      ],
+      "submit": "Send Message",
+      "successTitle": "Message Sent!",
+      "successMessage": "Thank you for reaching out. Our travel experts will contact you shortly."
+    },
+    "map": {
+      "embedUrl": "https://maps.google.com/maps?q=Connaught+Place,+New+Delhi,+India&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      "title": "Our Office Location"
+    },
+    "office": {
+      "title": "Our Office",
+      "description": "Come say hello! We'd love to meet you.",
+      "address": "123 Travel Street, Connaught Place, New Delhi - 110001, India",
+      "hoursWeekday": "Mon - Sat: 9:00 AM - 6:00 PM",
+      "hoursWeekend": "Sunday: Closed"
+    }
+  },
+  "privacyPolicyPage": {
+    "bannerTitle": "Privacy Policy",
+    "lastUpdated": "Last Updated: January 1, 2026",
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "paragraphs": [
+          "At Tour.com, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you share with us when you use our website, enquire about packages, or book travel services."
+        ]
+      },
+      {
+        "title": "2. Information We Collect",
+        "paragraphs": [
+          "We may collect the following types of information:"
+        ],
+        "bullets": [
+          "Personal information such as your name, email address, phone number, and travel preferences.",
+          "Technical information including your IP address, browser type, and device information.",
+          "Any other information you voluntarily provide through forms, enquiries, or communications with our team."
+        ]
+      },
+      {
+        "title": "3. How We Use Your Information",
+        "paragraphs": [
+          "We use your information to:"
+        ],
+        "bullets": [
+          "Respond to your enquiries and provide travel-related services.",
+          "Improve our website, packages, and customer experience.",
+          "Send important updates, offers, and travel-related communications (with your consent where required).",
+          "Ensure the security and proper functioning of our website and services."
+        ]
+      },
+      {
+        "title": "4. Sharing Your Information",
+        "paragraphs": [
+          "We do not sell, rent, or trade your personal information. We may share your data only with trusted service providers such as airlines, hotels, transport partners, or payment processors when necessary to deliver the services you request, and only under appropriate confidentiality obligations."
+        ]
+      },
+      {
+        "title": "5. Data Security",
+        "paragraphs": [
+          "We implement appropriate technical and organizational security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. While we strive to safeguard your data, no method of transmission over the internet is completely secure."
+        ]
+      },
+      {
+        "title": "6. Your Rights",
+        "paragraphs": [
+          "You have the right to access, update, or request deletion of your personal information held by us. You may also opt out of marketing communications at any time. To exercise these rights, please contact us using the details below."
+        ]
+      },
+      {
+        "title": "7. Changes to This Policy",
+        "paragraphs": [
+          "We may update this Privacy Policy from time to time to reflect changes in our practices, services, or legal requirements. The revised policy will be posted on this page with an updated revision date."
+        ]
+      },
+      {
+        "title": "8. Contact Us",
+        "paragraphs": [
+          "If you have any questions about this Privacy Policy or how we handle your personal information, please visit our Contact Us page or reach us at info@tour.com / +91 98765 43210."
+        ],
+        "contactLink": true
+      }
+    ]
+  },
+  "sitemapPage": {
+    "bannerTitle": "Sitemap",
+    "brandTitle": "Tour.com",
+    "label": "Sitemap",
+    "description": "Find all the pages of our website in one place.",
+    "columns": [
+      {
+        "title": "Main Pages",
+        "links": [
+          { "name": "Home", "href": "/" },
+          { "name": "About Us", "href": "/about-us" },
+          { "name": "Mission & Vision", "href": "/mission-vision" },
+          { "name": "Awards & Recognition", "href": "/awards" },
+          { "name": "Why Choose Us", "href": "/why-choose-us" },
+          { "name": "Our Team", "href": "/our-team" },
+          { "name": "Team Detail", "href": "/team/sarah-khan" }
+        ]
+      },
+      {
+        "title": "Services & Packages",
+        "links": [
+          { "name": "Our Services", "href": "/services" },
+          { "name": "Service Detail", "href": "/services/flight-booking" },
+          { "name": "Tour Packages", "href": "/packages" },
+          { "name": "Package Detail", "href": "/packages/maldives-getaway" },
+          { "name": "Destinations", "href": "/destinations" }
+        ]
+      },
+      {
+        "title": "Media & Resources",
+        "links": [
+          { "name": "Gallery", "href": "/gallery" },
+          { "name": "Testimonials", "href": "/testimonials" },
+          { "name": "FAQ", "href": "/faq" },
+          { "name": "Blog", "href": "/blog" },
+          { "name": "Blog Detail", "href": "/blog/essential-travel-tips-hassle-free-vacation" },
+          { "name": "Partners", "href": "/partners" }
+        ]
+      },
+      {
+        "title": "Support & Legal",
+        "groups": [
+          {
+            "title": "Contact & Support",
+            "links": [
+              { "name": "Contact Us", "href": "/contact" },
+              { "name": "Enquiry", "href": "/contact#contact-form" }
+            ]
+          },
+          {
+            "title": "Legal",
+            "links": [
+              { "name": "Privacy Policy", "href": "/privacy-policy" },
+              { "name": "Terms & Conditions", "href": "#" },
+              { "name": "Refund Policy", "href": "#" },
+              { "name": "Payment Policy", "href": "#" }
+            ]
+          },
+          {
+            "title": "Others",
+            "links": [
+              { "name": "404 Page", "href": "/page-not-found" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you’re looking for doesn’t exist or may have been moved. Let’s get you back on track!",
+    "buttonText": "Go to Home",
+    "buttonHref": "/"
   }
 }

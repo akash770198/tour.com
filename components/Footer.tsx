@@ -4,8 +4,20 @@ import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import siteData from "../data/site.json";
 
+const socialIcons = {
+  facebook: FaFacebookF,
+  instagram: FaInstagram,
+  twitter: FaTwitter,
+  linkedin: FaLinkedinIn,
+  youtube: FaYoutube,
+} as const;
+
+type SocialLink = { name: string; icon: keyof typeof socialIcons; href: string };
+
 export default function Footer() {
   const { footer, navbar } = siteData;
+  const socialLinks = footer.social as SocialLink[];
+  const telHref = `tel:${footer.contact.phone.replace(/[^\d+]/g, "")}`;
 
   return (
     <footer className="w-full flex flex-col mt-12">
@@ -32,11 +44,21 @@ export default function Footer() {
                 {footer.description}
               </p>
               <div className="flex space-x-3 mb-6">
-                <Link href="#" className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"><FaFacebookF size={14} /></Link>
-                <Link href="#" className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"><FaInstagram size={14} /></Link>
-                <Link href="#" className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"><FaTwitter size={14} /></Link>
-                <Link href="#" className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"><FaLinkedinIn size={14} /></Link>
-                <Link href="#" className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"><FaYoutube size={14} /></Link>
+                {socialLinks.map((link) => {
+                  const Icon = socialIcons[link.icon];
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.name}
+                      className="w-8 h-8 rounded-full bg-[#2a68a5] text-white flex items-center justify-center hover:bg-[#36b9b3] transition-colors"
+                    >
+                      <Icon size={14} />
+                    </a>
+                  );
+                })}
               </div>
               <p className="font-cursive text-2xl text-[#2a68a5] mt-2 font-script">
                 {footer.cursiveText}
@@ -109,7 +131,9 @@ export default function Footer() {
                     <Phone size={18} className="text-[#36b9b3]" />
                   </div>
                   <div className="flex flex-col pt-1">
-                    <span className="font-semibold text-sm text-[#0d2a4c]">{footer.contact.phone}</span>
+                    <a href={telHref} className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors">
+                      {footer.contact.phone}
+                    </a>
                     <span className="text-xs text-gray-500 mt-1">{footer.contact.timing}</span>
                   </div>
                 </div>
@@ -119,7 +143,12 @@ export default function Footer() {
                     <Mail size={18} className="text-[#36b9b3]" />
                   </div>
                   <div className="flex flex-col pt-1">
-                    <span className="font-semibold text-sm text-[#0d2a4c]">{footer.contact.email}</span>
+                    <a
+                      href={`mailto:${footer.contact.email}`}
+                      className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors"
+                    >
+                      {footer.contact.email}
+                    </a>
                     <span className="text-xs text-gray-500 mt-1">{footer.contact.emailSub}</span>
                   </div>
                 </div>
@@ -129,7 +158,14 @@ export default function Footer() {
                     <MapPin size={18} className="text-[#36b9b3]" />
                   </div>
                   <div className="flex flex-col pt-1">
-                    <span className="text-sm text-gray-600 leading-snug">{footer.contact.address}</span>
+                    <a
+                      href={footer.contact.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-600 leading-snug hover:text-[#36b9b3] transition-colors"
+                    >
+                      {footer.contact.address}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -161,11 +197,21 @@ export default function Footer() {
 
           <div className="flex items-center space-x-4 opacity-90">
             <span className="opacity-50 mr-2 hidden md:inline">|</span>
-            <Link href="#" className="hover:text-gray-300"><FaFacebookF size={14} /></Link>
-            <Link href="#" className="hover:text-gray-300"><FaInstagram size={14} /></Link>
-            <Link href="#" className="hover:text-gray-300"><FaTwitter size={14} /></Link>
-            <Link href="#" className="hover:text-gray-300"><FaLinkedinIn size={14} /></Link>
-            <Link href="#" className="hover:text-gray-300"><FaYoutube size={14} /></Link>
+            {socialLinks.map((link) => {
+              const Icon = socialIcons[link.icon];
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.name}
+                  className="hover:text-gray-300"
+                >
+                  <Icon size={14} />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
