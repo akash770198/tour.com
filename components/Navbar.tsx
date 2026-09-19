@@ -69,7 +69,9 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
       <nav className={`sticky top-0 z-50 w-full bg-white text-gray-800 py-4 shadow-sm ${className ?? ""}`}>
         <div className="container mx-auto px-4 flex justify-between items-center max-w-[1340px]">
           <div className="flex-shrink-0">
-            <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
+            <Link href="/" aria-label="Go to home page">
+              <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
+            </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center font-medium">
             {navbar.links.map((link: TourNavLink, idx: number) => {

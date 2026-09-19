@@ -39,7 +39,9 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
             {/* Column 1: Logo & Description */}
             <div className="lg:col-span-4 flex flex-col items-start pr-4 border-r-0 lg:border-r border-gray-200">
               <div className="flex-shrink-0 mb-6">
-                <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
+                <Link href="/" aria-label="Go to home page">
+                  <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
+                </Link>
               </div>
               <p className="text-sm leading-relaxed mb-6">
                 {footer.description}
