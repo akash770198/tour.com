@@ -1,12 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { site, SectionProps, TourHeaderData, TourNavLink } from "@/data";
 
+function pathMatches(pathname: string, href: string) {
+  if (!href || href === "#") return false;
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function isLinkActive(pathname: string, link: TourNavLink) {
+  if (pathMatches(pathname, link.href)) return true;
+  if (link.dropdown?.length) {
+    return link.dropdown.some((item) => pathMatches(pathname, item.href));
+  }
+  return false;
+}
+
 export default function Navbar({ data, className }: SectionProps<TourHeaderData> = {}) {
   const navbar = data || site.navbar;
   const { topbar } = site;
+  const pathname = usePathname();
 
   return (
     <>
@@ -54,35 +72,45 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
             <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
           </div>
           <div className="hidden md:flex space-x-8 items-center font-medium">
-            {navbar.links.map((link: TourNavLink, idx: number) => (
-              <div key={idx} className="relative group py-2">
-                <Link
-                  href={link.href}
-                  className={`flex items-center hover:text-[#36b9b3] transition-colors relative ${link.active ? 'text-[#36b9b3]' : ''}`}
-                >
-                  {link.name}
-                  {link.hasDropdown && <ChevronDown size={16} className="ml-1 text-gray-500 transition-transform group-hover:rotate-180" />}
-                  {link.active && (
-                    <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-[#36b9b3]" />
-                  )}
-                </Link>
-                {link.hasDropdown && link.dropdown && (
-                  <div className="absolute top-full left-0 pt-3 w-56 hidden group-hover:block z-50">
-                    <div className="bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden flex flex-col border-t-[3px] border-[#36b9b3]">
-                      {link.dropdown.map((dropLink, dropIdx: number) => (
-                        <Link 
-                          key={dropIdx} 
-                          href={dropLink.href}
-                          className="block px-5 py-3 text-[15px] text-gray-700 hover:bg-[#f0f7fc] hover:text-[#36b9b3] border-b border-gray-100 last:border-0 transition-colors"
-                        >
-                          {dropLink.name}
-                        </Link>
-                      ))}
+            {navbar.links.map((link: TourNavLink, idx: number) => {
+              const active = isLinkActive(pathname, link);
+              return (
+                <div key={idx} className="relative group py-2">
+                  <Link
+                    href={link.href}
+                    className={`flex items-center hover:text-[#36b9b3] transition-colors relative ${active ? "text-[#36b9b3]" : ""}`}
+                  >
+                    {link.name}
+                    {link.hasDropdown && <ChevronDown size={16} className="ml-1 text-gray-500 transition-transform group-hover:rotate-180" />}
+                    {active && (
+                      <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-[#36b9b3]" />
+                    )}
+                  </Link>
+                  {link.hasDropdown && link.dropdown && (
+                    <div className="absolute top-full left-0 pt-3 w-56 hidden group-hover:block z-50">
+                      <div className="bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden flex flex-col border-t-[3px] border-[#36b9b3]">
+                        {link.dropdown.map((dropLink, dropIdx: number) => {
+                          const dropActive = pathMatches(pathname, dropLink.href);
+                          return (
+                            <Link
+                              key={dropIdx}
+                              href={dropLink.href}
+                              className={`block px-5 py-3 text-[15px] border-b border-gray-100 last:border-0 transition-colors ${
+                                dropActive
+                                  ? "bg-[#f0f7fc] text-[#36b9b3]"
+                                  : "text-gray-700 hover:bg-[#f0f7fc] hover:text-[#36b9b3]"
+                              }`}
+                            >
+                              {dropLink.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </div>
           <div>
             <button className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-6 py-2.5 rounded-full font-medium transition-colors flex items-center gap-2">

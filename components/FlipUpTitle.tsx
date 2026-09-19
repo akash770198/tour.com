@@ -58,7 +58,7 @@ export default function FlipUpTitle({
       {words.map((item, index) => (
         <span
           key={`${item.word}-${index}`}
-          className="inline-block overflow-hidden align-bottom mr-[0.28em] last:mr-0"
+          className="inline-block overflow-hidden align-bottom mr-[0.28em] last:mr-0 pb-[0.22em] -mb-[0.12em] leading-[1.25]"
         >
           <motion.span
             className={`inline-block ${item.accent ? accentClassName : ""}`}
