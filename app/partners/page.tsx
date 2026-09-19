@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import PartnersPage from "@/components/PartnersPage";
-import siteData from "@/data/site.json";
+import { site } from "@/data";
 
 export const metadata = {
   title: "Partners | Tour.com",
@@ -12,7 +12,7 @@ export default function Partners() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-white overflow-x-clip">
       <Navbar />
-      <PageBanner title={siteData.partnersPage.bannerTitle} breadcrumbLabel="Partners" />
+      <PageBanner title={site.partnersPage.bannerTitle} breadcrumbLabel="Partners" />
       <PartnersPage />
       <Footer />
     </div>

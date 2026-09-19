@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Clock } from "lucide-react";
+import { ArrowRight, MapPin, Clock, Plane } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourTopDestinationsData } from "@/data";
 
-export default function TopDestinations() {
+export default function TopDestinations({ data, className }: SectionProps<TourTopDestinationsData> = {}) {
+  const destinationsSection = data || site.destinationsSection;
+
   return (
-    <section className="py-16 bg-white w-full">
+    <section className={`py-16 bg-white w-full ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         {/* Header */}
         <motion.div 
@@ -19,26 +21,26 @@ export default function TopDestinations() {
         >
           <div className="flex items-center justify-center mb-2">
             <p className="font-cursive text-3xl md:text-4xl text-[#36b9b3] font-script">
-              {siteData.destinationsSection.cursiveText}
+              {destinationsSection.cursiveText}
             </p>
-            <div className="ml-3 mt-2">
-              <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 25 Q 25 25 45 10" stroke="#36b9b3" strokeWidth="1.5" strokeDasharray="3 3" fill="none" />
-                <path d="M45 10 L49 2 L53 10 Z" fill="#2f5c97" transform="translate(1, -1.5) rotate(55 45 10)" />
+            <div className="ml-3 mt-2 flex items-start">
+              <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 25 Q 22 25 42 10" stroke="#36b9b3" strokeWidth="1.5" strokeDasharray="3 3" fill="none" />
               </svg>
+              <Plane size={32} strokeWidth={1} className="-ml-1 -mt-4 text-[#5a8fc4] fill-[#5a8fc4]" />
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0d2a4c]">
-            {siteData.destinationsSection.headingPart1} <span className="text-[#36b9b3]">{siteData.destinationsSection.headingPart2}</span>
+            {destinationsSection.headingPart1} <span className="text-[#36b9b3]">{destinationsSection.headingPart2}</span>
           </h2>
           <p className="text-gray-500 max-w-2xl text-sm md:text-base leading-relaxed">
-            {siteData.destinationsSection.description}
+            {destinationsSection.description}
           </p>
         </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {siteData.destinationsSection.items.map((item, idx) => (
+          {destinationsSection.items.map((item, idx) => (
             <motion.div 
               key={idx} 
               initial={{ opacity: 0, y: 30, rotate: item.rotation }}
@@ -68,7 +70,7 @@ export default function TopDestinations() {
             href="/destinations"
             className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-8 py-3.5 rounded-full font-medium transition-colors flex items-center gap-2 shadow-md"
           >
-            {siteData.destinationsSection.buttonText} <ArrowRight size={18} />
+            {destinationsSection.buttonText} <ArrowRight size={18} />
           </Link>
         </div>
       </div>

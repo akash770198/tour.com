@@ -17,28 +17,11 @@ import {
   Users,
   X,
 } from "lucide-react";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourPackagesPageData, TourPackage } from "@/data";
 import { motion } from "framer-motion";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type DurationFilter = { label: string; min: number; max: number };
-type SortOption = { value: string; label: string };
-type TourPackage = {
-  slug: string;
-  title: string;
-  destination: string;
-  description: string;
-  image: string;
-  badge: string;
-  durationDays: number;
-  durationLabel: string;
-  people: string;
-  includes: string;
-  price: number;
-  types: string[];
-  travelMonths: string[];
-  popularity: number;
-};
+type DurationFilter = TourPackagesPageData["durations"][number];
 
 type FilterState = {
   destination: string;
@@ -78,11 +61,11 @@ function matchesFilters(item: TourPackage, filters: FilterState, durations: Dura
   return destinationMatch && typeMatch && priceMatch && durationMatch && monthMatch;
 }
 
-export default function TourPackagesPage() {
-  const page = siteData.tourPackagesPage;
-  const items = page.items as TourPackage[];
-  const durations = page.durations as DurationFilter[];
-  const sortOptions = page.sortOptions as SortOption[];
+export default function TourPackagesPage({ data, className }: SectionProps<TourPackagesPageData> = {}) {
+  const page = data || site.tourPackagesPage;
+  const items = page.items;
+  const durations = page.durations;
+  const sortOptions = page.sortOptions;
   const priceMin = page.priceMin;
   const priceMax = page.priceMax;
   const priceStep = page.priceStep;
@@ -186,7 +169,7 @@ export default function TourPackagesPage() {
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
   return (
-    <section className="py-12 md:py-16 w-full relative">
+    <section className={`py-12 md:py-16 w-full relative ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <motion.aside

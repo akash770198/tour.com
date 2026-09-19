@@ -1,13 +1,13 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { Plane, Building, Map, Bus, FileText, ShieldCheck, Compass, Headphones, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourServicesData } from "@/data";
 
-export default function OurServices() {
-  const { ourServicesSection } = siteData;
+export default function OurServices({ data, className }: SectionProps<TourServicesData> = {}) {
+  const ourServicesSection = data || site.ourServicesSection;
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -24,7 +24,7 @@ export default function OurServices() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#eaf4fa] to-[#f4faff] w-full">
+    <section className={`py-16 bg-gradient-to-b from-[#eaf4fa] to-[#f4faff] w-full ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         {/* Header */}
         <motion.div 

@@ -6,15 +6,16 @@ import { motion } from "framer-motion";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp } from "../lib/page-motion";
 
-interface PageBannerProps {
-  title: string;
-  breadcrumbLabel?: string;
-}
+import { SectionProps } from "@/data";
 
-export default function PageBanner({ title, breadcrumbLabel }: PageBannerProps) {
+export default function PageBanner({
+  title,
+  breadcrumbLabel,
+  className,
+}: SectionProps & { title: string; breadcrumbLabel?: string }) {
   return (
     <div
-      className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      className={`relative w-full h-[300px] md:h-[400px] flex items-center justify-center bg-cover bg-center bg-no-repeat ${className ?? ""}`}
       style={{ backgroundImage: "url('/pagebanner.jpg')" }}
     >
       <div className="absolute inset-0 bg-[#0d2a4c]/60" />

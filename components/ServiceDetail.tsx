@@ -7,11 +7,15 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { SectionProps, TourServiceDetails } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, scaleIn, staggerDelay } from "../lib/page-motion";
 
-export default function ServiceDetail({ details }: { details: any }) {
-  if (!details) return null;
+export default function ServiceDetail({
+  data,
+  className,
+}: SectionProps<TourServiceDetails> & { data: TourServiceDetails }) {
+  const details = data;
 
   const { hero, sidebar, benefits, contentBlock, cta } = details;
 
@@ -33,7 +37,7 @@ export default function ServiceDetail({ details }: { details: any }) {
   };
 
   return (
-    <div className="w-full bg-white pb-20">
+    <div className={`w-full bg-white pb-20 ${className ?? ""}`}>
       
       {/* SECTION 1: HERO & SIDEBAR (OVERLAPPING) */}
       <section className="pt-20 pb-10">
@@ -78,7 +82,7 @@ export default function ServiceDetail({ details }: { details: any }) {
 
                 {/* Features Grid 2x2 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                  {hero.features.map((feat: any, idx: number) => (
+                  {hero.features.map((feat, idx) => (
                     <div key={idx} className="flex gap-4 group">
                       <div className="w-12 h-12 shrink-0 rounded-full bg-[#f0f7fc] flex items-center justify-center text-[#008cba] group-hover:bg-[#008cba] group-hover:text-white transition-colors duration-300">
                         {getIcon(feat.icon)}
@@ -144,7 +148,7 @@ export default function ServiceDetail({ details }: { details: any }) {
               <div className="flex-1">
                 <h3 className="text-[18px] font-bold text-[#0d2a4c] mb-5">{sidebar.helpTitle}</h3>
                 <div className="space-y-4">
-                  {sidebar.helpItems.map((item: any, idx: number) => (
+                  {sidebar.helpItems.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4">
                       <div className="w-10 h-10 rounded-full bg-[#f0f7fc] flex items-center justify-center text-[#008cba] shrink-0">
                         {getIcon(item.icon)}
@@ -179,7 +183,7 @@ export default function ServiceDetail({ details }: { details: any }) {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.items.map((opt: any, idx: number) => (
+            {benefits.items.map((opt, idx) => (
               <motion.div 
                 key={idx}
                 initial={fadeUp.initial}

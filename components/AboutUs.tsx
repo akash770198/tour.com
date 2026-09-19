@@ -3,11 +3,13 @@
 import Image from "next/image";
 import { Users, Award, Handshake, Globe, Plane, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourAboutData } from "@/data";
 
-export default function AboutUs() {
+export default function AboutUs({ data, className }: SectionProps<TourAboutData> = {}) {
+  const aboutUsSection = data || site.aboutUsSection;
+
   return (
-    <section className="py-16 bg-white w-full overflow-hidden">
+    <section className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           
@@ -21,20 +23,20 @@ export default function AboutUs() {
           >
             <div className="flex items-center mb-4">
               <p className="font-cursive text-3xl md:text-4xl text-[#36b9b3] font-script">
-                {siteData.aboutUsSection.cursiveText}
+                {aboutUsSection.cursiveText}
               </p>
               <div className="w-16 h-[2px] bg-gray-200 ml-4 mt-2"></div>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#0d2a4c] leading-tight">
-              {siteData.aboutUsSection.headingPart1} {siteData.aboutUsSection.headingPart2} <span className="text-[#36b9b3]">{siteData.aboutUsSection.headingPart3}</span>
+              {aboutUsSection.headingPart1} {aboutUsSection.headingPart2} <span className="text-[#36b9b3]">{aboutUsSection.headingPart3}</span>
             </h2>
             <p className="text-gray-600 text-base md:text-lg mb-10 leading-relaxed max-w-xl">
-              {siteData.aboutUsSection.description}
+              {aboutUsSection.description}
             </p>
 
             {/* Features Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-              {siteData.aboutUsSection.features.map((feature, idx) => (
+              {aboutUsSection.features.map((feature, idx) => (
                 <div key={idx} className="flex items-start">
                   <div className="w-14 h-14 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-5">
                     {idx === 0 && <Users size={24} className="text-[#0d2a4c]" />}
@@ -52,7 +54,7 @@ export default function AboutUs() {
 
             <div>
               <button className="bg-[#008cba] hover:bg-[#007ba3] text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 shadow-md group">
-                {siteData.aboutUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                {aboutUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </motion.div>
@@ -70,8 +72,8 @@ export default function AboutUs() {
             
             {/* Main Large Image */}
             <div className="relative w-[90%] md:w-[85%] ml-auto aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-3">
-              {siteData.aboutUsSection.mainImage ? (
-                <Image src={siteData.aboutUsSection.mainImage} alt="About Us" fill className="object-cover" />
+              {aboutUsSection.mainImage ? (
+                <Image src={aboutUsSection.mainImage} alt="About Us" fill className="object-cover" />
               ) : (
                 <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">Main Image Placeholder</div>
               )}
@@ -81,8 +83,8 @@ export default function AboutUs() {
             <div className="absolute bottom-[-10%] left-0 w-[55%] md:w-[45%] aspect-[4/3] z-20 transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-2">
               {/* Image itself */}
               <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white relative transition-transform duration-500 group-hover:scale-[1.02]">
-                {siteData.aboutUsSection.smallImage ? (
-                  <Image src={siteData.aboutUsSection.smallImage} alt="About Experience" fill className="object-cover" />
+                {aboutUsSection.smallImage ? (
+                  <Image src={aboutUsSection.smallImage} alt="About Experience" fill className="object-cover" />
                 ) : (
                   <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-sm text-center">Small Image<br/>Placeholder</div>
                 )}

@@ -3,24 +3,11 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourSitemapData } from "@/data";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type SitemapLink = {
-  name: string;
-  href: string;
-};
-
-type SitemapGroup = {
-  title: string;
-  links: SitemapLink[];
-};
-
-type SitemapColumn = {
-  title: string;
-  links?: SitemapLink[];
-  groups?: SitemapGroup[];
-};
+type SitemapColumn = TourSitemapData["columns"][number];
+type SitemapLink = NonNullable<SitemapColumn["links"]>[number];
 
 function SitemapLinkItem({ link }: { link: SitemapLink }) {
   return (
@@ -36,12 +23,12 @@ function SitemapLinkItem({ link }: { link: SitemapLink }) {
   );
 }
 
-export default function SitemapPage() {
-  const page = siteData.sitemapPage;
-  const columns = page.columns as SitemapColumn[];
+export default function SitemapPage({ data, className }: SectionProps<TourSitemapData> = {}) {
+  const page = data || site.sitemapPage;
+  const columns = page.columns;
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className={`w-full py-16 md:py-20 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="flex flex-col items-center text-center mb-12 md:mb-14">
           <motion.h2

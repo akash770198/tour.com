@@ -12,13 +12,16 @@ import {
   GraduationCap, 
   ClipboardList 
 } from "lucide-react";
-import siteData from "../data/site.json";
+import { SectionProps, TourTeamMemberDetails } from "@/data";
 
-export default function TeamDetail({ member }: { member: any }) {
-  if (!member) return null;
+export default function TeamDetail({
+  data,
+  className,
+}: SectionProps<TourTeamMemberDetails> & { data: TourTeamMemberDetails }) {
+  const member = data;
 
   return (
-    <section className="py-20 bg-white">
+    <section className={`py-20 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1200px]">
         
         {/* Top Profile Section */}
@@ -78,7 +81,7 @@ export default function TeamDetail({ member }: { member: any }) {
             </p>
 
             <div className="space-y-4 mb-8 text-gray-500 text-sm md:text-base leading-relaxed">
-              {member.paragraphs.map((p: string, i: number) => (
+              {member.paragraphs.map((p, i) => (
                 <p key={i}>
                   {i === 1 ? (
                     <>
@@ -167,7 +170,7 @@ export default function TeamDetail({ member }: { member: any }) {
             </div>
             
             <ul className="space-y-4">
-              {member.expertise.skills.map((skill: string, idx: number) => (
+              {member.expertise.skills.map((skill, idx) => (
                 <li key={idx} className="flex items-center gap-3 text-gray-600 font-medium text-sm md:text-base">
                   <CheckCircle2 size={18} className="text-[#008cba]" />
                   {skill}
@@ -184,7 +187,7 @@ export default function TeamDetail({ member }: { member: any }) {
             transition={{ delay: 0.1 }}
             className="bg-[#0d2a4c] rounded-2xl p-8 flex flex-col justify-center gap-8 shadow-xl"
           >
-            {member.stats.map((stat: any, idx: number) => (
+            {member.stats.map((stat, idx) => (
               <div key={idx} className="flex items-center gap-6">
                 <div className="w-14 h-14 border border-white/20 rounded-full flex items-center justify-center text-white shrink-0">
                   {stat.icon === 'globe' && <Globe size={24} strokeWidth={1.5} />}
@@ -229,7 +232,7 @@ export default function TeamDetail({ member }: { member: any }) {
                 <h3 className="text-lg font-bold text-[#0d2a4c]">{member.certifications.title}</h3>
               </div>
               <ul className="list-disc pl-5 space-y-2">
-                {member.certifications.items.map((item: string, idx: number) => (
+                {member.certifications.items.map((item, idx) => (
                   <li key={idx} className="text-[#0d2a4c] text-sm font-medium">
                     {item}
                   </li>

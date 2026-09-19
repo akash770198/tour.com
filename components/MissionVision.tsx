@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourMissionVisionData } from "@/data";
 
-export default function MissionVision() {
-  const { missionVisionSection } = siteData;
+export default function MissionVision({ data, className }: SectionProps<TourMissionVisionData> = {}) {
+  const missionVisionSection = data || site.missionVisionSection;
   const { mission, vision } = missionVisionSection;
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className={`py-20 bg-white overflow-hidden ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         
         {/* MISSION ROW */}

@@ -2,21 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourPartnersData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type PartnerItem = {
-  name: string;
-  logo: string;
-};
-
-export default function PartnersPage() {
-  const page = siteData.partnersPage;
-  const items = page.items as PartnerItem[];
+export default function PartnersPage({ data, className }: SectionProps<TourPartnersData> = {}) {
+  const page = data || site.partnersPage;
+  const items = page.items;
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className={`w-full py-16 md:py-20 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="flex flex-col items-center text-center mb-12 md:mb-14">
           <motion.div

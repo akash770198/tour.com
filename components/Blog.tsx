@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourBlogData } from "@/data";
 
-export default function Blog() {
-  const { blogSection } = siteData;
+export default function Blog({ data, className }: SectionProps<TourBlogData> = {}) {
+  const blogSection = data || site.blogSection;
 
   return (
-    <section className="py-16 bg-white w-full overflow-hidden">
+    <section className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         {/* Header */}
         <motion.div 

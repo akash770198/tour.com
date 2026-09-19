@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourWhyChooseUsData } from "@/data";
 
-export default function WhyChooseUs() {
-  const { whyChooseUsSection } = siteData;
+export default function WhyChooseUs({ data, className }: SectionProps<TourWhyChooseUsData> = {}) {
+  const whyChooseUsSection = data || site.whyChooseUsSection;
 
   return (
-    <section className="py-16 bg-white w-full overflow-hidden">
+    <section className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           

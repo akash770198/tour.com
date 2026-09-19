@@ -5,22 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Plane } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourTopDestinationsListingData } from "@/data";
+
+type DestinationCard = TourTopDestinationsListingData["items"][number];
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type DestinationCard = {
-  slug: string;
-  badge: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  filter?: string;
-};
-
-export default function TopDestinationsPage() {
-  const page = siteData.topDestinationsPage;
-  const items = page.items as DestinationCard[];
+export default function TopDestinationsPage({ data, className }: SectionProps<TourTopDestinationsListingData> = {}) {
+  const page = data || site.topDestinationsPage;
+  const items = page.items;
   const perPage = page.perPage;
   const [pageIndex, setPageIndex] = useState(1);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -43,7 +36,7 @@ export default function TopDestinationsPage() {
     item.filter ? `/packages?destination=${encodeURIComponent(item.filter)}` : "/packages";
 
   return (
-    <section className="relative w-full py-16 md:py-20 bg-[#f7fbff] overflow-hidden">
+    <section className={`relative w-full py-16 md:py-20 bg-[#f7fbff] overflow-hidden ${className ?? ""}`}>
       <div className="pointer-events-none absolute left-6 top-10 hidden lg:flex items-center text-[#36b9b3]/50">
         <Plane size={28} className="-rotate-12" />
         <svg width="90" height="40" viewBox="0 0 90 40" fill="none" className="ml-1 mt-2">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourFooterData } from "@/data";
 
 const socialIcons = {
   facebook: FaFacebookF,
@@ -14,13 +14,14 @@ const socialIcons = {
 
 type SocialLink = { name: string; icon: keyof typeof socialIcons; href: string };
 
-export default function Footer() {
-  const { footer, navbar } = siteData;
+export default function Footer({ data, className }: SectionProps<TourFooterData> = {}) {
+  const footer = data || site.footer;
+  const { navbar } = site;
   const socialLinks = footer.social as SocialLink[];
   const telHref = `tel:${footer.contact.phone.replace(/[^\d+]/g, "")}`;
 
   return (
-    <footer className="w-full flex flex-col mt-12">
+    <footer className={`w-full flex flex-col mt-12 ${className ?? ""}`}>
       {/* Main Footer Area with Background */}
       <div className="relative w-full bg-[#f4faff] pt-12 overflow-hidden flex flex-col">
         <div className="absolute inset-0 z-0">

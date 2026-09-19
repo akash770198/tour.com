@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourTestimonialData } from "@/data";
 
-export default function Testimonials() {
-  const { testimonialSection } = siteData;
+export default function Testimonials({ data, className }: SectionProps<TourTestimonialData> = {}) {
+  const testimonialSection = data || site.testimonialSection;
   const { items } = testimonialSection;
   const [currentIndex, setCurrentIndex] = useState(2); // Start at 2 so there's enough history for prev items
 
@@ -35,7 +35,7 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="py-16 bg-white w-full overflow-hidden">
+    <section className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         
         {/* Header */}

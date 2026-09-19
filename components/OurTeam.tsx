@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import siteData from "../data/site.json";
+import { site, SectionProps, TourTeamData } from "@/data";
 
-export default function OurTeam() {
-  const { teamSection } = siteData as any; // Allow for dynamic typing
+export default function OurTeam({ data, className }: SectionProps<TourTeamData> = {}) {
+  const teamSection = data || site.teamSection;
 
   if (!teamSection) return null; // Safety fallback
 
   return (
-    <section className="py-20 bg-gray-50/30">
+    <section className={`py-20 bg-gray-50/30 ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         
         {/* Header */}
@@ -41,7 +41,7 @@ export default function OurTeam() {
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          {teamSection.items.map((member: any, index: number) => (
+          {teamSection.items.map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

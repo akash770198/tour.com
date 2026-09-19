@@ -2,17 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourTestimonialData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
-
-type TestimonialItem = {
-  image: string;
-  name: string;
-  title: string;
-  quote: string;
-  rating: number;
-};
 
 function initials(name: string) {
   return name
@@ -35,12 +27,12 @@ function QuoteIcon() {
   );
 }
 
-export default function TestimonialsPage() {
-  const section = siteData.testimonialSection;
-  const items = section.items as TestimonialItem[];
+export default function TestimonialsPage({ data, className }: SectionProps<TourTestimonialData> = {}) {
+  const section = data || site.testimonialSection;
+  const items = section.items;
 
   return (
-    <section className="w-full py-16 md:py-20 bg-[#f7fbff]">
+    <section className={`w-full py-16 md:py-20 bg-[#f7fbff] ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="flex flex-col items-center text-center mb-12 md:mb-14">
           <motion.div

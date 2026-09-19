@@ -2,22 +2,15 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourPrivacyPolicyData } from "@/data";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type PolicySection = {
-  title: string;
-  paragraphs: string[];
-  bullets?: string[];
-  contactLink?: boolean;
-};
-
-export default function PrivacyPolicyPage() {
-  const page = siteData.privacyPolicyPage;
-  const sections = page.sections as PolicySection[];
+export default function PrivacyPolicyPage({ data, className }: SectionProps<TourPrivacyPolicyData> = {}) {
+  const page = data || site.privacyPolicyPage;
+  const sections = page.sections;
 
   return (
-    <section className="w-full py-14 md:py-16 bg-white">
+    <section className={`w-full py-14 md:py-16 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[900px]">
         <div className="space-y-9 md:space-y-10">
           {sections.map((section, index) => (

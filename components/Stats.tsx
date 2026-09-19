@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView, animate } from "framer-motion";
 import Image from "next/image";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourStatsData } from "@/data";
 
 function Counter({ from, to, isDecimal }: { from: number; to: number; isDecimal?: boolean }) {
   const nodeRef = useRef<HTMLSpanElement>(null);
@@ -26,11 +26,11 @@ function Counter({ from, to, isDecimal }: { from: number; to: number; isDecimal?
   return <span ref={nodeRef}>{from}</span>;
 }
 
-export default function Stats() {
-  const { statsSection } = siteData;
+export default function Stats({ data, className }: SectionProps<TourStatsData> = {}) {
+  const statsSection = data || site.statsSection;
 
   return (
-    <section className="relative py-12 lg:py-16 text-white overflow-hidden">
+    <section className={`relative py-12 lg:py-16 text-white overflow-hidden ${className ?? ""}`}>
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0 bg-[#0d2a4c]">
         {statsSection.backgroundImage ? (

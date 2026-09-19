@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourHeaderData, TourNavLink } from "@/data";
 
-export default function Navbar() {
-  const { topbar, navbar } = siteData;
+export default function Navbar({ data, className }: SectionProps<TourHeaderData> = {}) {
+  const navbar = data || site.navbar;
+  const { topbar } = site;
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <>
       {/* TopBar */}
       <div className="hidden lg:flex w-full bg-[#2f5c97] text-white text-sm h-12">
         <div className="container mx-auto px-4 flex justify-between items-center h-full max-w-[1340px]">
@@ -47,13 +48,13 @@ export default function Navbar() {
       </div>
 
       {/* NavBar */}
-      <nav className="w-full bg-white text-gray-800 py-4 shadow-sm">
+      <nav className={`sticky top-0 z-50 w-full bg-white text-gray-800 py-4 shadow-sm ${className ?? ""}`}>
         <div className="container mx-auto px-4 flex justify-between items-center max-w-[1340px]">
           <div className="flex-shrink-0">
             <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
           </div>
           <div className="hidden md:flex space-x-8 items-center font-medium">
-            {navbar.links.map((link: any, idx: number) => (
+            {navbar.links.map((link: TourNavLink, idx: number) => (
               <div key={idx} className="relative group py-2">
                 <Link
                   href={link.href}
@@ -68,7 +69,7 @@ export default function Navbar() {
                 {link.hasDropdown && link.dropdown && (
                   <div className="absolute top-full left-0 pt-3 w-56 hidden group-hover:block z-50">
                     <div className="bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden flex flex-col border-t-[3px] border-[#36b9b3]">
-                      {link.dropdown.map((dropLink: any, dropIdx: number) => (
+                      {link.dropdown.map((dropLink, dropIdx: number) => (
                         <Link 
                           key={dropIdx} 
                           href={dropLink.href}
@@ -90,6 +91,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </header>
+    </>
   );
 }

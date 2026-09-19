@@ -5,22 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourBlogPageData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type BlogPost = {
-  slug: string;
-  image: string;
-  date: string;
-  category: string;
-  title: string;
-  description: string;
-};
-
-export default function BlogPage() {
-  const page = siteData.blogPage;
-  const items = page.items as BlogPost[];
+export default function BlogPage({ data, className }: SectionProps<TourBlogPageData> = {}) {
+  const page = data || site.blogPage;
+  const items = page.items;
   const perPage = page.perPage;
   const [pageIndex, setPageIndex] = useState(1);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -40,7 +31,7 @@ export default function BlogPage() {
   };
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className={`w-full py-16 md:py-20 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="flex flex-col items-center text-center mb-12 md:mb-14">
           <motion.div

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Home } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourNotFoundData } from "@/data";
 import { easeOut, fadeUp } from "../lib/page-motion";
 
 function SadFileIcon() {
@@ -27,11 +27,11 @@ function SadFileIcon() {
   );
 }
 
-export default function NotFoundPage() {
-  const page = siteData.notFoundPage;
+export default function NotFoundPage({ data, className }: SectionProps<TourNotFoundData> = {}) {
+  const page = data || site.notFoundPage;
 
   return (
-    <section className="w-full flex-1 bg-white py-20 md:py-28">
+    <section className={`w-full flex-1 bg-white py-20 md:py-28 ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px] flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

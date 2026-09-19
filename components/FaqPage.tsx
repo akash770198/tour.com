@@ -4,18 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Headphones, Minus, Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourFAQData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type FaqItem = {
-  question: string;
-  answer: string;
-};
-
-export default function FaqPage() {
-  const page = siteData.faqPage;
-  const items = page.items as FaqItem[];
+export default function FaqPage({ data, className }: SectionProps<TourFAQData> = {}) {
+  const page = data || site.faqPage;
+  const items = page.items;
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index: number) => {
@@ -23,7 +18,7 @@ export default function FaqPage() {
   };
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className={`w-full py-16 md:py-20 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.35fr)] gap-10 lg:gap-14 items-start">
           <div className="lg:sticky lg:top-28">

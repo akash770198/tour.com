@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourBannerData } from "@/data";
 
-export default function Hero() {
-  const { hero } = siteData;
+export default function Hero({ data, className }: SectionProps<TourBannerData> = {}) {
+  const hero = data || site.hero;
   const [currentBanner, setCurrentBanner] = useState(0);
 
   // Auto-slide every 5 seconds
@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] flex items-center overflow-hidden">
+    <section className={`relative isolate w-full h-[600px] md:h-[700px] -mb-10 md:-mb-14 flex items-center overflow-hidden ${className ?? ""}`}>
       {/* Animated Background Banners */}
       <div className="absolute inset-0 w-full h-full bg-black">
         <AnimatePresence mode="popLayout">
@@ -51,19 +51,19 @@ export default function Hero() {
         {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#2f5c97]/60 to-transparent z-[5]" />
       
-        {/* Wavy bottom border */}
-        <div className="absolute bottom-[-1px] left-0 w-full z-10 pointer-events-none">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 1440 100" 
-            preserveAspectRatio="none"
-            className="w-full h-[30px] md:h-[45px] drop-shadow-[0_-8px_8px_rgba(255,255,255,1)]"
-          >
-            <path 
-              d="M0,50 Q180,0 360,50 T720,50 T1080,50 T1440,50 L1440,100 L0,100 Z" 
-              fill="#ffffff" 
-            />
-          </svg>
+        {/* Cloud bottom overlay */}
+        <div
+          aria-hidden
+          className="absolute bottom-[-1px] left-0 w-full h-[130px] md:h-[220px] z-10 pointer-events-none"
+        >
+          <Image
+            src={hero.bottomOverlay}
+            alt=""
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-bottom"
+          />
         </div>
       </div>
 

@@ -10,24 +10,11 @@ import {
   X,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourGalleryData } from "@/data";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 import FlipUpTitle from "./FlipUpTitle";
 
-type GalleryImage = {
-  id: string;
-  label: string;
-  image: string;
-};
-
-type GalleryVideo = {
-  id: string;
-  title: string;
-  subtitle: string;
-  duration: string;
-  poster: string;
-  src: string;
-};
+type GalleryVideo = TourGalleryData["videos"]["items"][number];
 
 function isYouTube(src: string) {
   return /youtube\.com|youtu\.be/.test(src);
@@ -41,10 +28,10 @@ function youtubeEmbed(src: string) {
   return src;
 }
 
-export default function GalleryPage() {
-  const page = siteData.galleryPage;
-  const images = page.images.items as GalleryImage[];
-  const videos = page.videos.items as GalleryVideo[];
+export default function GalleryPage({ data, className }: SectionProps<TourGalleryData> = {}) {
+  const page = data || site.galleryPage;
+  const images = page.images.items;
+  const videos = page.videos.items;
 
   const [showAllImages, setShowAllImages] = useState(false);
   const [showAllVideos, setShowAllVideos] = useState(false);
@@ -98,7 +85,7 @@ export default function GalleryPage() {
   }, [lightboxIndex, activeVideo, visibleImages.length]);
 
   return (
-    <div className="w-full pb-20">
+    <div className={`w-full pb-20 ${className ?? ""}`}>
       <section className="pt-16 md:pt-20 pb-10">
         <div className="container mx-auto px-4 max-w-[1340px]">
           <div className="flex flex-col items-center text-center mb-12">

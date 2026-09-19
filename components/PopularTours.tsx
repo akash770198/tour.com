@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Star, Calendar } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Calendar, Plane } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourPopularToursData } from "@/data";
 
 const GAP = "1.5rem"; // must match gap-6
 
@@ -26,8 +26,8 @@ function useVisibleCount() {
   return visible;
 }
 
-export default function PopularTours() {
-  const { popularToursSection } = siteData;
+export default function PopularTours({ data, className }: SectionProps<TourPopularToursData> = {}) {
+  const popularToursSection = data || site.popularToursSection;
   const items = popularToursSection.items;
   
   const [offset, setOffset] = useState(0);
@@ -70,7 +70,7 @@ export default function PopularTours() {
   const slideX = `calc(-${offset} * (100% + ${GAP}) / ${visible})`;
 
   return (
-    <section className="py-16 bg-white w-full overflow-hidden relative">
+    <section className={`py-16 bg-white w-full overflow-hidden relative ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px] relative">
         {/* Header */}
         <motion.div 
@@ -83,11 +83,11 @@ export default function PopularTours() {
             <p className="font-cursive text-3xl md:text-4xl text-[#36b9b3] font-script">
               {popularToursSection.cursiveText}
             </p>
-            <div className="ml-3 mt-2">
-              <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 25 Q 25 25 45 10" stroke="#36b9b3" strokeWidth="1.5" strokeDasharray="3 3" fill="none" />
-                <path d="M45 10 L49 2 L53 10 Z" fill="#2f5c97" transform="translate(1, -1.5) rotate(55 45 10)" />
+            <div className="ml-3 mt-2 flex items-start">
+              <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 25 Q 22 25 42 10" stroke="#36b9b3" strokeWidth="1.5" strokeDasharray="3 3" fill="none" />
               </svg>
+              <Plane size={32} strokeWidth={1} className="-ml-1 -mt-4 text-[#5a8fc4] fill-[#5a8fc4]" />
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0d2a4c]">

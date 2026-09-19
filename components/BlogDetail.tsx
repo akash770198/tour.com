@@ -4,55 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Plane } from "lucide-react";
 import { motion } from "framer-motion";
+import { site, SectionProps, TourBlogPost } from "@/data";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type BlogPost = {
-  slug: string;
-  image: string;
-  date: string;
-  category: string;
-  title: string;
-  description: string;
-  author: string;
-  featuredImage: string;
-  intro: string[];
-  whyHeading: string;
-  whyBody: string;
-  placesHeading: string;
-  placesBody: string;
-  timeHeading: string;
-  timeBody: string;
-  tipsHeading: string;
-  tips: string[];
-  quote: { text: string; attribution: string };
-  closing: string;
-};
-
-type SidebarCategory = { name: string; count: number };
-
-type BlogSidebar = {
-  categoriesTitle: string;
-  recentTitle: string;
-  categories: SidebarCategory[];
-  cta: {
-    title: string;
-    description: string;
-    buttonText: string;
-    href: string;
-  };
-};
-
 export default function BlogDetail({
-  post,
-  recent,
-  sidebar,
-}: {
-  post: BlogPost;
-  recent: BlogPost[];
-  sidebar: BlogSidebar;
-}) {
+  data,
+  className,
+}: SectionProps<TourBlogPost> & { data: TourBlogPost }) {
+  const post = data;
+  const sidebar = site.blogPage.sidebar;
+  const recent = site.blogPage.items.filter((item) => item.slug !== post.slug).slice(0, 4);
   return (
-    <section className="w-full py-14 md:py-16 bg-white">
+    <section className={`w-full py-14 md:py-16 bg-white ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_340px] gap-10 lg:gap-12 items-start">
           <motion.article

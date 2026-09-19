@@ -36,52 +36,8 @@ import {
   X,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { site, SectionProps, TourPackage } from "@/data";
 import { easeOut, fadeUp, scaleIn, staggerDelay } from "../lib/page-motion";
-
-type Highlight = { icon: string; title: string; subtitle: string };
-type ItineraryDay = { day: string; title: string; description: string };
-
-type PackageItem = {
-  slug: string;
-  title: string;
-  destination: string;
-  description: string;
-  image: string;
-  durationLabel: string;
-  price: number;
-  gallery: string[];
-  about: string;
-  highlights: Highlight[];
-  travelType: string;
-  groupSize: string;
-  itinerary: ItineraryDay[];
-  inclusions: string[];
-  exclusions: string[];
-  ctaTitle: string;
-};
-
-type PageCopy = {
-  form: {
-    title: string;
-    namePlaceholder: string;
-    emailPlaceholder: string;
-    phonePlaceholder: string;
-    datePlaceholder: string;
-    peoplePlaceholder: string;
-    peopleOptions: string[];
-    messagePlaceholder: string;
-    messageLabel: string;
-    submit: string;
-    privacy: string;
-    successTitle: string;
-    successMessage: string;
-  };
-  guarantees: { icon: string; title: string }[];
-  relatedTitle: string;
-  relatedSubtitle: string;
-  ctaButton: string;
-  ctaSubtitle: string;
-};
 
 const highlightIcons: Record<string, ComponentType<{ size?: number; strokeWidth?: number; className?: string }>> = {
   Building2,
@@ -122,14 +78,14 @@ function IconByName({ name, size = 22 }: { name: string; size?: number }) {
 }
 
 export default function PackageDetail({
-  pkg,
-  related,
-  page,
-}: {
-  pkg: PackageItem;
-  related: PackageItem[];
-  page: PageCopy;
-}) {
+  data,
+  className,
+}: SectionProps<TourPackage> & { data: TourPackage }) {
+  const pkg = data;
+  const page = site.tourPackagesPage;
+  const items = site.tourPackagesPage.items;
+  const index = items.findIndex((item) => item.slug === pkg.slug);
+  const related = [...items.slice(index + 1), ...items.slice(0, index)].slice(0, 4);
   const gallery = pkg.gallery?.length ? pkg.gallery : [pkg.image];
   const visibleGallery = gallery.slice(0, 4);
   const extraCount = Math.max(0, gallery.length - 4);
@@ -192,7 +148,7 @@ export default function PackageDetail({
   };
 
   return (
-    <div className="w-full pb-20">
+    <div className={`w-full pb-20 ${className ?? ""}`}>
       <section className="pt-10 pb-6">
         <div className="container mx-auto px-4 max-w-[1340px]">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] xl:grid-cols-[minmax(0,1fr)_380px] gap-8 items-start">

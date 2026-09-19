@@ -10,18 +10,11 @@ import {
   Phone,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourContactData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-type InfoCard = {
-  icon: string;
-  title: string;
-  line1: string;
-  line2: string;
-  href: string;
-  tone: "blue" | "purple";
-};
+type InfoCard = TourContactData["infoCards"][number];
 
 const iconMap = {
   Phone,
@@ -30,8 +23,8 @@ const iconMap = {
   Headphones,
 } as const;
 
-export default function ContactPage() {
-  const page = siteData.contactPage;
+export default function ContactPage({ data, className }: SectionProps<TourContactData> = {}) {
+  const page = data || site.contactPage;
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -40,7 +33,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="w-full bg-white pb-16 md:pb-20">
+    <div className={`w-full bg-white pb-16 md:pb-20 ${className ?? ""}`}>
       <section className="pt-10 md:pt-12 pb-6">
         <div className="container mx-auto px-4 max-w-[1340px]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">

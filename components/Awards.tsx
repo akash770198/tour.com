@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourAwardsData } from "@/data";
 
-export default function Awards() {
-  const { awardsSection } = siteData;
+export default function Awards({ data, className }: SectionProps<TourAwardsData> = {}) {
+  const awardsSection = data || site.awardsSection;
 
   return (
-    <section className="py-20 bg-gray-50/50">
+    <section className={`py-20 bg-gray-50/50 ${className ?? ""}`}>
       <div className="container mx-auto px-4 max-w-[1340px]">
         
         {/* Header */}
@@ -47,26 +47,23 @@ export default function Awards() {
               className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform duration-300"
             >
               {/* Image Area */}
-              <div className="relative w-full h-56 bg-gradient-to-br from-[#0d2a4c] to-[#1a4b82] flex flex-col items-center justify-center p-6 rounded-b-[40px]">
-                {/* Decorative background arcs */}
-                <div className="absolute inset-0 overflow-hidden rounded-b-[40px]">
-                  <div className="absolute -left-[20%] -top-[20%] w-[140%] h-[140%] rounded-full border border-white/5"></div>
-                  <div className="absolute -left-[10%] -top-[10%] w-[120%] h-[120%] rounded-full border border-white/5"></div>
-                </div>
-                
-                {/* Image */}
-                <div className="relative z-10 w-full h-full">
-                  {award.image ? (
-                    <Image src={award.image} alt={award.title} fill className="object-contain drop-shadow-2xl" />
-                  ) : (
-                    <div className="w-full h-full border-2 border-dashed border-white/20 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                      Award Image
-                    </div>
-                  )}
-                </div>
+              <div className="relative w-full aspect-square">
+                {award.image ? (
+                  <Image
+                    src={award.image}
+                    alt={award.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center text-gray-400 text-sm">
+                    Award Image
+                  </div>
+                )}
 
                 {/* Year Badge */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white text-[#008cba] text-xs font-bold px-6 py-1.5 rounded-full border border-[#e3ecf5] shadow-sm z-20">
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#008cba] text-white text-xs font-bold px-6 py-1.5 rounded-full shadow-sm z-20">
                   {award.year}
                 </div>
               </div>

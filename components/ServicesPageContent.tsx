@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Plane, Building, Bus, FileText, ShieldCheck, Compass, Headphones, ArrowRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import siteData from "../data/site.json";
+import { site, SectionProps, TourServicesPageData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-export default function ServicesPageContent() {
-  const { servicesPageSection } = siteData;
+export default function ServicesPageContent({ data, className }: SectionProps<TourServicesPageData> = {}) {
+  const servicesPageSection = data || site.servicesPageSection;
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -26,7 +26,7 @@ export default function ServicesPageContent() {
   };
 
   return (
-    <section className="py-20 bg-white w-full relative overflow-hidden">
+    <section className={`py-20 bg-white w-full relative overflow-hidden ${className ?? ""}`}>
       {/* Decorative Flying Plane & Route */}
       <div className="absolute top-0 left-[-20px] lg:left-0 text-[#008cba]/20 hidden md:block w-64 h-48 opacity-60">
         <svg width="100%" height="100%" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
