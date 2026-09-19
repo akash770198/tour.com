@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight, Menu, X } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { site, SectionProps, TourHeaderData, TourNavLink } from "@/data";
 
@@ -25,6 +26,20 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
   const navbar = data || site.navbar;
   const { topbar } = site;
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   return (
     <>
@@ -54,7 +69,7 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
               <Phone size={16} />
               <span>{topbar.phone}</span>
             </div>
-            <div 
+            <div
               className="h-full bg-[#36b9b3] flex items-center px-6 relative"
               style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)", marginLeft: "-10px", paddingLeft: "30px" }}
             >
@@ -73,6 +88,7 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
               <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
             </Link>
           </div>
+
           <div className="hidden md:flex space-x-8 items-center font-medium">
             {navbar.links.map((link: TourNavLink, idx: number) => {
               const active = isLinkActive(pathname, link);
@@ -114,10 +130,103 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
               );
             })}
           </div>
-          <div>
-            <button className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-6 py-2.5 rounded-full font-medium transition-colors flex items-center gap-2">
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="hidden sm:inline-flex bg-[#36b9b3] hover:bg-[#2c9893] text-white px-5 md:px-6 py-2.5 rounded-full font-medium transition-colors items-center gap-2"
+            >
               {navbar.button} <ArrowRight size={18} />
+            </Link>
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-gray-200 text-[#0d2a4c] hover:border-[#36b9b3] hover:text-[#36b9b3] transition-colors"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen((open) => !open)}
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+            mobileOpen ? "max-h-[min(80vh,720px)] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="border-t border-gray-100 bg-white px-4 pb-5 pt-2 shadow-inner">
+            <div className="flex flex-col">
+              {navbar.links.map((link: TourNavLink, idx: number) => {
+                const active = isLinkActive(pathname, link);
+                const hasDropdown = Boolean(link.hasDropdown && link.dropdown?.length);
+                const dropdownOpen = openDropdown === idx;
+
+                return (
+                  <div key={idx} className="border-b border-gray-100 last:border-0">
+                    {hasDropdown ? (
+                      <>
+                        <button
+                          type="button"
+                          className={`w-full flex items-center justify-between py-3.5 font-medium transition-colors ${
+                            active ? "text-[#36b9b3]" : "text-gray-800"
+                          }`}
+                          onClick={() => setOpenDropdown(dropdownOpen ? null : idx)}
+                          aria-expanded={dropdownOpen}
+                        >
+                          <span>{link.name}</span>
+                          <ChevronDown
+                            size={18}
+                            className={`text-gray-500 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                        <div
+                          className={`overflow-hidden transition-[max-height] duration-300 ${
+                            dropdownOpen ? "max-h-80" : "max-h-0"
+                          }`}
+                        >
+                          <div className="pb-3 pl-3 flex flex-col gap-1">
+                            {link.dropdown?.map((dropLink, dropIdx) => {
+                              const dropActive = pathMatches(pathname, dropLink.href);
+                              return (
+                                <Link
+                                  key={dropIdx}
+                                  href={dropLink.href}
+                                  className={`rounded-lg px-3 py-2.5 text-[15px] transition-colors ${
+                                    dropActive
+                                      ? "bg-[#f0f7fc] text-[#36b9b3]"
+                                      : "text-gray-600 hover:bg-[#f0f7fc] hover:text-[#36b9b3]"
+                                  }`}
+                                >
+                                  {dropLink.name}
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`block py-3.5 font-medium transition-colors ${
+                          active ? "text-[#36b9b3]" : "text-gray-800 hover:text-[#36b9b3]"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <Link
+              href="/contact"
+              className="mt-4 sm:hidden inline-flex w-full justify-center bg-[#36b9b3] hover:bg-[#2c9893] text-white px-6 py-3 rounded-full font-medium transition-colors items-center gap-2"
+            >
+              {navbar.button} <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </nav>
