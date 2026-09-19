@@ -37,11 +37,11 @@ export default function TopDestinationsPage({ data, className }: SectionProps<To
 
   return (
     <section className={`relative w-full py-16 md:py-20 bg-[#f7fbff] overflow-hidden ${className ?? ""}`}>
-      <div className="pointer-events-none absolute left-6 top-10 hidden lg:flex items-center text-[#36b9b3]/50">
-        <Plane size={28} className="-rotate-12" />
-        <svg width="90" height="40" viewBox="0 0 90 40" fill="none" className="ml-1 mt-2">
+      <div className="pointer-events-none absolute left-6 top-10 hidden lg:flex items-start text-[#36b9b3]/50">
+        <svg width="90" height="40" viewBox="0 0 90 40" fill="none" className="mt-2">
           <path d="M2 30 Q 30 30 55 14 Q 70 5 88 8" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" fill="none" />
         </svg>
+        <Plane size={28} strokeWidth={1} className="-ml-1 -mt-1 text-[#36b9b3]/50 fill-[#36b9b3]/50 rotate-12" />
       </div>
       <div className="pointer-events-none absolute right-10 top-6 hidden md:block w-40 h-40 rounded-full bg-[#e7f7f8]" />
 
