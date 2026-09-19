@@ -16,8 +16,8 @@ function pathMatches(pathname: string, href: string) {
 
 function isLinkActive(pathname: string, link: TourNavLink) {
   if (pathMatches(pathname, link.href)) return true;
-  if (link.dropdown?.length) {
-    return link.dropdown.some((item) => pathMatches(pathname, item.href));
+  if (link.children?.length) {
+    return link.children.some((item) => pathMatches(pathname, item.href));
   }
   return false;
 }
@@ -104,10 +104,10 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
                       <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-[#36b9b3]" />
                     )}
                   </Link>
-                  {link.hasDropdown && link.dropdown && (
+                  {link.hasDropdown && link.children && (
                     <div className="absolute top-full left-0 pt-3 w-56 hidden group-hover:block z-50">
                       <div className="bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden flex flex-col border-t-[3px] border-[#36b9b3]">
-                        {link.dropdown.map((dropLink, dropIdx: number) => {
+                        {link.children.map((dropLink, dropIdx: number) => {
                           const dropActive = pathMatches(pathname, dropLink.href);
                           return (
                             <Link
@@ -160,7 +160,7 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
             <div className="flex flex-col">
               {navbar.links.map((link: TourNavLink, idx: number) => {
                 const active = isLinkActive(pathname, link);
-                const hasDropdown = Boolean(link.hasDropdown && link.dropdown?.length);
+                const hasDropdown = Boolean(link.hasDropdown && link.children?.length);
                 const dropdownOpen = openDropdown === idx;
 
                 return (
@@ -187,7 +187,7 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
                           }`}
                         >
                           <div className="pb-3 pl-3 flex flex-col gap-1">
-                            {link.dropdown?.map((dropLink, dropIdx) => {
+                            {link.children?.map((dropLink, dropIdx) => {
                               const dropActive = pathMatches(pathname, dropLink.href);
                               return (
                                 <Link

@@ -312,7 +312,7 @@
                 "name": "About",
                 "href": "#",
                 "hasDropdown": true,
-                "dropdown": [
+                "children": [
                   {
                     "name": "About Us",
                     "href": "/about-us"
@@ -349,7 +349,7 @@
                 "name": "Pages",
                 "href": "/gallery",
                 "hasDropdown": true,
-                "dropdown": [
+                "children": [
                   {
                     "name": "Gallery",
                     "href": "/gallery"
@@ -1084,7 +1084,7 @@
         "variants": {
           "TourAbout1": {
             "cursiveText": "About Us",
-            "headingPart1": "Creating Journeys",
+            "headingPart1": "Creating Journey ",
             "headingPart2": "Beyond",
             "headingPart3": "Destinations",
             "description": "At Tour.com, we believe travel is more than just visiting new places — it's about creating memories that last a lifetime. With a passion for exploration and a commitment to excellence, we curate exceptional travel experiences that bring people, places, and cultures closer together.",
