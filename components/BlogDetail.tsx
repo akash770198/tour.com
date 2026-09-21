@@ -97,20 +97,27 @@ export default function BlogDetail({
             >
               <h3 className="text-[18px] font-bold text-[#0d2a4c] mb-4">{sidebar.categoriesTitle}</h3>
               <ul className="space-y-1">
-                {sidebar.categories.map((category) => (
-                  <li key={category.name}>
-                    <Link
-                      href="/blog"
-                      className="flex items-center justify-between gap-3 py-2.5 text-[14px] text-[#0d2a4c] hover:text-[#008cba] transition-colors border-b border-[#d7e8f5] last:border-0"
-                    >
-                      <span className="font-medium">{category.name}</span>
-                      <span className="inline-flex items-center gap-2 text-[#2f5c97]">
-                        <span className="tabular-nums">{category.count}</span>
-                        <ArrowRight size={14} />
-                      </span>
-                    </Link>
-                  </li>
-                ))}
+                {sidebar.categories.map((category) => {
+                  const active = category.name === post.category;
+                  return (
+                    <li key={category.name}>
+                      <Link
+                        href={`/blog?category=${encodeURIComponent(category.name)}`}
+                        className={`flex items-center justify-between gap-3 py-2.5 text-[14px] transition-colors border-b border-[#d7e8f5] last:border-0 ${
+                          active
+                            ? "text-[#008cba]"
+                            : "text-[#0d2a4c] hover:text-[#008cba]"
+                        }`}
+                      >
+                        <span className="font-medium">{category.name}</span>
+                        <span className="inline-flex items-center gap-2 text-[#2f5c97]">
+                          <span className="tabular-nums">{category.count}</span>
+                          <ArrowRight size={14} />
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </motion.div>
 

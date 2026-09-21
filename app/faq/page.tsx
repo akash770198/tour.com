@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import FaqPage from "@/components/FaqPage";
 
@@ -9,11 +7,9 @@ export const metadata = {
 
 export default function Faq() {
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-[#f7fbff] overflow-x-clip">
-      <Navbar />
+    <div className="flex flex-col flex-1 font-sans bg-[#f7fbff] overflow-x-clip">
       <PageBanner title="FAQS" />
       <FaqPage />
-      <Footer />
     </div>
   );
 }

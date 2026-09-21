@@ -1,13 +1,9 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import NotFoundPage from "@/components/NotFoundPage";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-white overflow-x-clip">
-      <Navbar />
+    <div className="flex flex-col flex-1 font-sans bg-white overflow-x-clip">
       <NotFoundPage />
-      <Footer />
     </div>
   );
 }

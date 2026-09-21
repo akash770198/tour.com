@@ -67,7 +67,7 @@ export default function TopDestinations({ data, className }: SectionProps<TourTo
         {/* Button */}
         <div className="flex justify-center">
           <Link
-            href="/destinations"
+            href="/top-destinations"
             className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-8 py-3.5 rounded-full font-medium transition-colors flex items-center gap-2 shadow-md"
           >
             {destinationsSection.buttonText} <ArrowRight size={18} />

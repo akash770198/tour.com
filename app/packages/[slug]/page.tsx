@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import PackageDetail from "@/components/PackageDetail";
 import { site } from "@/data";
@@ -30,11 +28,14 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-[#f8fbff] overflow-x-clip">
-      <Navbar />
-      <PageBanner title="Tour Package Detail" breadcrumbLabel="Tour Packages" />
+    <div className="flex flex-col flex-1 font-sans bg-[#f8fbff] overflow-x-clip">
+      <PageBanner
+        title={pkg.title}
+        parentLabel="Tour Packages"
+        parentHref="/packages"
+        breadcrumbLabel={pkg.title}
+      />
       <PackageDetail data={pkg} />
-      <Footer />
     </div>
   );
 }

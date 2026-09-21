@@ -1,27 +1,40 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { site, SectionProps, TourBlogPageData } from "@/data";
 import FlipUpTitle from "./FlipUpTitle";
 import { easeOut, fadeUp, staggerDelay } from "../lib/page-motion";
 
-export default function BlogPage({ data, className }: SectionProps<TourBlogPageData> = {}) {
+export default function BlogPage({
+  data,
+  className,
+  category,
+}: SectionProps<TourBlogPageData> & { category?: string }) {
   const page = data || site.blogPage;
   const items = page.items;
   const perPage = page.perPage;
   const [pageIndex, setPageIndex] = useState(1);
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const totalPages = Math.max(1, Math.ceil(items.length / perPage));
+  const filteredItems = useMemo(() => {
+    if (!category) return items;
+    return items.filter((item) => item.category === category);
+  }, [items, category]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredItems.length / perPage));
   const currentPage = Math.min(pageIndex, totalPages);
   const visible = useMemo(() => {
     const start = (currentPage - 1) * perPage;
-    return items.slice(start, start + perPage);
-  }, [items, currentPage, perPage]);
+    return filteredItems.slice(start, start + perPage);
+  }, [filteredItems, currentPage, perPage]);
+
+  useEffect(() => {
+    setPageIndex(1);
+  }, [category]);
 
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
@@ -60,6 +73,28 @@ export default function BlogPage({ data, className }: SectionProps<TourBlogPageD
           >
             {page.description}
           </motion.p>
+
+          {category && (
+            <motion.div
+              initial={fadeUp.initial}
+              animate={fadeUp.animate}
+              transition={{ ...easeOut, delay: 0.5 }}
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#eef6fc] px-4 py-2 text-[14px] text-[#0d2a4c]"
+            >
+              <span>
+                Showing <span className="font-semibold">{filteredItems.length}</span>{" "}
+                {filteredItems.length === 1 ? "post" : "posts"} in{" "}
+                <span className="font-semibold text-[#008cba]">{category}</span>
+              </span>
+              <Link
+                href="/blog"
+                className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-[#2f5c97] hover:bg-[#36b9b3] hover:text-white transition-colors"
+                aria-label="Clear category filter"
+              >
+                <X size={14} />
+              </Link>
+            </motion.div>
+          )}
         </div>
 
         <div
@@ -68,7 +103,7 @@ export default function BlogPage({ data, className }: SectionProps<TourBlogPageD
         >
           {visible.map((item, index) => (
             <motion.article
-              key={`${item.slug}-${currentPage}`}
+              key={`${item.slug}-${currentPage}-${category ?? "all"}`}
               initial={fadeUp.initial}
               animate={fadeUp.animate}
               transition={staggerDelay(index)}
@@ -109,6 +144,10 @@ export default function BlogPage({ data, className }: SectionProps<TourBlogPageD
             </motion.article>
           ))}
         </div>
+
+        {filteredItems.length === 0 && (
+          <p className="text-center text-gray-500 mt-8">No posts found in this category.</p>
+        )}
 
         {totalPages > 1 && (
           <motion.div

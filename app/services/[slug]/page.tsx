@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import ServiceDetail from "@/components/ServiceDetail";
 import { site } from "@/data";
@@ -18,11 +16,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-white overflow-x-clip">
-      <Navbar />
+    <div className="flex flex-col flex-1 font-sans bg-white overflow-x-clip">
       <PageBanner title="Services Detail" />
       <ServiceDetail data={service.details} />
-      <Footer />
     </div>
   );
 }

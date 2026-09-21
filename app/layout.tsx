@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Great_Vibes } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -25,8 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/pagebanner.jpg" />
+      </head>
       <body className={`${outfit.variable} ${greatVibes.variable} font-sans antialiased min-h-screen flex flex-col`}>
-        {children}
+        <Navbar />
+        <div className="flex-1 flex flex-col min-w-0">{children}</div>
+        <Footer />
       </body>
     </html>
   );

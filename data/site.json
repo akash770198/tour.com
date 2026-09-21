@@ -346,6 +346,11 @@
                 "hasDropdown": false
               },
               {
+                "name": "Services",
+                "href": "/services",
+                "hasDropdown": false
+              },
+              {
                 "name": "Pages",
                 "href": "/gallery",
                 "hasDropdown": true,
@@ -5576,39 +5581,6 @@
                 "closing": "Ready to experience heritage cities perfect for a long weekend for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
               },
               {
-                "slug": "island-hopping-greece-basics",
-                "image": "/TopDestination/Greece.jpg",
-                "date": "16 May 2026",
-                "category": "Destination Guide",
-                "title": "Island Hopping in Greece: Ferries, Stays and Timing",
-                "description": "How to link iconic islands without rushing — and when each destination shines brightest.",
-                "author": "Wanderlust Desk",
-                "featuredImage": "/Our_blogs/img2.jpg",
-                "intro": [
-                  "How to link iconic islands without rushing — and when each destination shines brightest. In this guide, we unpack practical ideas around island hopping in greece so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Visit This Destination",
-                "whyBody": "From iconic landmarks to quiet local corners, this destination rewards curious travelers with scenery, culture, and unforgettable moments.",
-                "placesHeading": "Top Places to Explore",
-                "placesBody": "Balance headline attractions with slower neighborhoods, scenic viewpoints, and one or two experiences that feel uniquely local.",
-                "timeHeading": "Best Time to Visit",
-                "timeBody": "Shoulder seasons often bring pleasant weather, fewer crowds, and better value on hotels and flights.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Book popular attractions in advance during peak months.",
-                  "Mix early mornings with relaxed afternoons to avoid fatigue.",
-                  "Use local transit passes where available.",
-                  "Keep one free evening for spontaneous discoveries.",
-                  "Try at least one regional specialty dish."
-                ],
-                "quote": {
-                  "text": "Every destination tells a story — take time to listen as you explore.",
-                  "attribution": "Wanderlust Desk"
-                },
-                "closing": "Ready to experience island hopping in greece for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
                 "slug": "travel-photography-beginner-tips",
                 "image": "/TopDestination/pexels-slava-kol-2154185140-34431799.jpg",
                 "date": "12 May 2026",
@@ -5673,501 +5645,6 @@
                   "attribution": "Travel Explorer"
                 },
                 "closing": "Ready to experience visa-ready document checklist before you apply for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "luxury-vs-value-resort-picks",
-                "image": "/TopDestination/Maldives.jpg",
-                "date": "04 May 2026",
-                "category": "Budget Travel",
-                "title": "Luxury Feel on a Mid-Range Budget: Resort Picks",
-                "description": "Where upgrades matter most and where you can save without losing the vacation vibe.",
-                "author": "Tour.com Editors",
-                "featuredImage": "/TopDestination/Maldives.jpg",
-                "intro": [
-                  "Where upgrades matter most and where you can save without losing the vacation vibe. In this guide, we unpack practical ideas around luxury feel on a mid-range budget so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Budget Travel Works",
-                "whyBody": "Spending wisely does not mean missing out. Smart timing and local choices stretch your budget across more experiences.",
-                "placesHeading": "Where Value Is Highest",
-                "placesBody": "Look for destinations with strong local transit, affordable eats, and free or low-cost cultural attractions.",
-                "timeHeading": "Best Time to Save",
-                "timeBody": "Shoulder seasons and midweek flights usually unlock the best combination of price and comfort.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Set a daily spend limit and track it loosely.",
-                  "Mix one special meal with local street food.",
-                  "Choose centrally located stays to cut transport costs.",
-                  "Book flexible tickets when plans may change.",
-                  "Use free walking tours and public parks for exploration."
-                ],
-                "quote": {
-                  "text": "Travel far by spending smart, not by spending less on every moment.",
-                  "attribution": "Tour.com Editors"
-                },
-                "closing": "Ready to experience luxury feel on a mid-range budget for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "hiking-packing-layering-guide",
-                "image": "/TopDestination/Switzerland.jpg",
-                "date": "30 Apr 2026",
-                "category": "Packing Guide",
-                "title": "Layering Guide for Mountain and Hiking Trips",
-                "description": "Base layers, shells, and footwear advice for changing weather on scenic trails.",
-                "author": "Wanderlust Desk",
-                "featuredImage": "/TopDestination/Bali_View.jpg",
-                "intro": [
-                  "Base layers, shells, and footwear advice for changing weather on scenic trails. In this guide, we unpack practical ideas around layering guide for mountain and hiking trips so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Smart Packing Matters",
-                "whyBody": "Traveling light keeps you flexible, reduces baggage fees, and makes airport days far less stressful.",
-                "placesHeading": "What to Pack For",
-                "placesBody": "These packing ideas work for city walks, short flights, and changing weather across temperate destinations.",
-                "timeHeading": "When to Pack",
-                "timeBody": "Lay everything out two nights before departure, then remove three items you can live without.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Choose versatile layers in a coordinated color palette.",
-                  "Use packing cubes to separate outfits and essentials.",
-                  "Keep liquids, chargers, and documents in your personal item.",
-                  "Wear your bulkiest shoes on travel days.",
-                  "Leave space for souvenirs on the return trip."
-                ],
-                "quote": {
-                  "text": "The best suitcase is the one you barely notice carrying.",
-                  "attribution": "Wanderlust Desk"
-                },
-                "closing": "Ready to experience layering guide for mountain and hiking trips for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "foodie-cities-asia-map",
-                "image": "/TopDestination/Bali_View.jpg",
-                "date": "26 Apr 2026",
-                "category": "Cultural Experiences",
-                "title": "Foodie Cities in Asia Worth Building a Trip Around",
-                "description": "Markets, tasting menus, and neighborhood eats that deserve a spot on your bucket list.",
-                "author": "Journey Notes",
-                "featuredImage": "/TopDestination/Dubai.jpg",
-                "intro": [
-                  "Markets, tasting menus, and neighborhood eats that deserve a spot on your bucket list. In this guide, we unpack practical ideas around foodie cities in asia worth building a trip around so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Culture Transforms Travel",
-                "whyBody": "Markets, festivals, food, and heritage sites help you understand a place beyond the postcard view.",
-                "placesHeading": "Cultural Highlights",
-                "placesBody": "Pair museums with neighborhood walks, workshops, and conversations that reveal everyday life.",
-                "timeHeading": "Best Time for Cultural Immersion",
-                "timeBody": "Festival calendars and local holidays can enrich a trip — just book early when cities get busy.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Learn a few polite phrases in the local language.",
-                  "Dress respectfully at temples and heritage sites.",
-                  "Ask before photographing people.",
-                  "Support local artisans and family-run eateries.",
-                  "Join a guided food or heritage walk on day one."
-                ],
-                "quote": {
-                  "text": "Culture is the souvenir that never fits in a suitcase.",
-                  "attribution": "Journey Notes"
-                },
-                "closing": "Ready to experience foodie cities in asia worth building a trip around for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "quick-beach-breaks-goa-andhra",
-                "image": "/Tour_Packages/img3.jpg",
-                "date": "22 Apr 2026",
-                "category": "Weekend Getaways",
-                "title": "Quick Beach Breaks for Busy Weekends",
-                "description": "Nearby coasts and easy stays when you only have two days to reset by the sea.",
-                "author": "Travel Explorer",
-                "featuredImage": "/TopDestination/Greece.jpg",
-                "intro": [
-                  "Nearby coasts and easy stays when you only have two days to reset by the sea. In this guide, we unpack practical ideas around quick beach breaks for busy weekends so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Short Trips Matter",
-                "whyBody": "A well-planned weekend escape can reset your energy without burning vacation days or your budget.",
-                "placesHeading": "Easy Escapes Nearby",
-                "placesBody": "Choose destinations within a short flight or overnight train so travel time does not eat the whole break.",
-                "timeHeading": "Best Weekend Timing",
-                "timeBody": "Leave Friday evening when possible, and keep Sunday afternoon free for a relaxed return.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Pack light so transit stays effortless.",
-                  "Pre-book one highlight activity and keep the rest flexible.",
-                  "Choose stays with great breakfasts to save time.",
-                  "Avoid overstuffing the itinerary with long transfers.",
-                  "Bring a simple rain or sun backup plan."
-                ],
-                "quote": {
-                  "text": "Sometimes two days away is all it takes to feel brand new.",
-                  "attribution": "Travel Explorer"
-                },
-                "closing": "Ready to experience quick beach breaks for busy weekends for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "wildlife-safari-first-timers",
-                "image": "/Tour_Packages/img4 (2).jpg",
-                "date": "18 Apr 2026",
-                "category": "Adventure Travel",
-                "title": "Wildlife Safari Tips for First-Time Visitors",
-                "description": "Best times, park etiquette, and packing for early morning game drives.",
-                "author": "Tour.com Editors",
-                "featuredImage": "/Tour_Packages/img1.jpg",
-                "intro": [
-                  "Best times, park etiquette, and packing for early morning game drives. In this guide, we unpack practical ideas around wildlife safari tips for first-time visitors so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Choose Adventure",
-                "whyBody": "Adventure travel turns landscapes into playgrounds — with the right preparation, thrills stay safe and memorable.",
-                "placesHeading": "Top Adventure Spots",
-                "placesBody": "Beginner-friendly routes and guided experiences make mountains, deserts, and oceans accessible without unnecessary risk.",
-                "timeHeading": "Best Time for Adventure",
-                "timeBody": "Check seasonal conditions carefully. Weather windows matter more for outdoor activities than for city sightseeing.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Confirm operator credentials and safety standards.",
-                  "Pack weather-ready layers and broken-in footwear.",
-                  "Disclose fitness levels honestly before booking.",
-                  "Carry travel insurance that covers adventure sports.",
-                  "Hydrate early and respect altitude or sea conditions."
-                ],
-                "quote": {
-                  "text": "The best adventures respect nature as much as they chase excitement.",
-                  "attribution": "Tour.com Editors"
-                },
-                "closing": "Ready to experience wildlife safari tips for first-time visitors for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "city-break-dubai-three-days",
-                "image": "/TopDestination/Dubai.jpg",
-                "date": "14 Apr 2026",
-                "category": "Destination Guide",
-                "title": "Three Perfect Days in Dubai for First-Timers",
-                "description": "Skyline views, old souks, and desert evenings arranged into an easy city-break plan.",
-                "author": "Wanderlust Desk",
-                "featuredImage": "/Tour_Packages/img2.jpg",
-                "intro": [
-                  "Skyline views, old souks, and desert evenings arranged into an easy city-break plan. In this guide, we unpack practical ideas around three perfect days in dubai for first-timers so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Visit This Destination",
-                "whyBody": "From iconic landmarks to quiet local corners, this destination rewards curious travelers with scenery, culture, and unforgettable moments.",
-                "placesHeading": "Top Places to Explore",
-                "placesBody": "Balance headline attractions with slower neighborhoods, scenic viewpoints, and one or two experiences that feel uniquely local.",
-                "timeHeading": "Best Time to Visit",
-                "timeBody": "Shoulder seasons often bring pleasant weather, fewer crowds, and better value on hotels and flights.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Book popular attractions in advance during peak months.",
-                  "Mix early mornings with relaxed afternoons to avoid fatigue.",
-                  "Use local transit passes where available.",
-                  "Keep one free evening for spontaneous discoveries.",
-                  "Try at least one regional specialty dish."
-                ],
-                "quote": {
-                  "text": "Every destination tells a story — take time to listen as you explore.",
-                  "attribution": "Wanderlust Desk"
-                },
-                "closing": "Ready to experience three perfect days in dubai for first-timers for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "travel-insurance-what-matters",
-                "image": "/services_tour/insurance.jpg",
-                "date": "10 Apr 2026",
-                "category": "Travel Tips",
-                "title": "Travel Insurance: What Actually Matters on Trips",
-                "description": "Medical cover, trip cancellation, and fine print worth reading before you fly.",
-                "author": "Journey Notes",
-                "featuredImage": "/Tour_Packages/img3.jpg",
-                "intro": [
-                  "Medical cover, trip cancellation, and fine print worth reading before you fly. In this guide, we unpack practical ideas around travel insurance so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why These Tips Matter",
-                "whyBody": "A little preparation goes a long way. These practical habits help you avoid delays, save money, and enjoy every destination with more confidence.",
-                "placesHeading": "Where These Tips Shine",
-                "placesBody": "Use them on city breaks, beach holidays, and multi-country itineraries alike. The same fundamentals make every journey smoother.",
-                "timeHeading": "When to Apply Them",
-                "timeBody": "Start planning two to four weeks before departure, then revisit the checklist the night before you fly.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Carry a valid passport and check visa requirements early.",
-                  "Keep digital and paper copies of bookings in one folder.",
-                  "Pack a small day kit with chargers, medicines, and adapters.",
-                  "Build buffer time between flights and transfers.",
-                  "Share your itinerary with someone at home."
-                ],
-                "quote": {
-                  "text": "Great travel is less about luck and more about thoughtful preparation.",
-                  "attribution": "Journey Notes"
-                },
-                "closing": "Ready to experience travel insurance for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "romantic-getaways-asia",
-                "image": "/Our_blogs/img1.jpg",
-                "date": "06 Apr 2026",
-                "category": "Travel Inspiration",
-                "title": "Romantic Getaways Across Asia for Couples",
-                "description": "Quiet beaches, city nights, and boutique stays designed for two.",
-                "author": "Travel Explorer",
-                "featuredImage": "/Tour_Packages/img4 (2).jpg",
-                "intro": [
-                  "Quiet beaches, city nights, and boutique stays designed for two. In this guide, we unpack practical ideas around romantic getaways across asia for couples so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why This Journey Inspires",
-                "whyBody": "Travel resets your perspective. The right itinerary blends wonder, rest, and a few moments that stay with you long after you return.",
-                "placesHeading": "Moments Worth Chasing",
-                "placesBody": "Look for golden-hour viewpoints, quiet cafes, and experiences that feel personal rather than purely Instagrammable.",
-                "timeHeading": "Best Season for Inspiration",
-                "timeBody": "Travel when the light, festivals, or landscapes speak to the kind of memories you want to create.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Start with one big dream, then build a realistic route around it.",
-                  "Leave room for unplanned discoveries.",
-                  "Capture notes and photos, not only highlights.",
-                  "Talk to locals for offbeat recommendations.",
-                  "Protect rest days so inspiration does not turn into exhaustion."
-                ],
-                "quote": {
-                  "text": "Inspiration is found in the quiet moments between the famous sights.",
-                  "attribution": "Travel Explorer"
-                },
-                "closing": "Ready to experience romantic getaways across asia for couples for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "festival-travel-planning",
-                "image": "/services_tour/travel.jpg",
-                "date": "02 Apr 2026",
-                "category": "Cultural Experiences",
-                "title": "How to Plan Travel Around Local Festivals",
-                "description": "Book early, expect crowds, and experience celebrations respectfully and joyfully.",
-                "author": "Tour.com Editors",
-                "featuredImage": "/Our_blogs/img1.jpg",
-                "intro": [
-                  "Book early, expect crowds, and experience celebrations respectfully and joyfully. In this guide, we unpack practical ideas around how to plan travel around local festivals so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Culture Transforms Travel",
-                "whyBody": "Markets, festivals, food, and heritage sites help you understand a place beyond the postcard view.",
-                "placesHeading": "Cultural Highlights",
-                "placesBody": "Pair museums with neighborhood walks, workshops, and conversations that reveal everyday life.",
-                "timeHeading": "Best Time for Cultural Immersion",
-                "timeBody": "Festival calendars and local holidays can enrich a trip — just book early when cities get busy.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Learn a few polite phrases in the local language.",
-                  "Dress respectfully at temples and heritage sites.",
-                  "Ask before photographing people.",
-                  "Support local artisans and family-run eateries.",
-                  "Join a guided food or heritage walk on day one."
-                ],
-                "quote": {
-                  "text": "Culture is the souvenir that never fits in a suitcase.",
-                  "attribution": "Tour.com Editors"
-                },
-                "closing": "Ready to experience how to plan travel around local festivals for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "airport-transfer-hacks",
-                "image": "/services_tour/flight.jpg",
-                "date": "28 Mar 2026",
-                "category": "Travel Tips",
-                "title": "Airport Transfer Hacks That Save Time and Money",
-                "description": "When to book private cars, trains, or shared shuttles after a long flight.",
-                "author": "Wanderlust Desk",
-                "featuredImage": "/Our_blogs/img2.jpg",
-                "intro": [
-                  "When to book private cars, trains, or shared shuttles after a long flight. In this guide, we unpack practical ideas around airport transfer hacks that save time and money so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why These Tips Matter",
-                "whyBody": "A little preparation goes a long way. These practical habits help you avoid delays, save money, and enjoy every destination with more confidence.",
-                "placesHeading": "Where These Tips Shine",
-                "placesBody": "Use them on city breaks, beach holidays, and multi-country itineraries alike. The same fundamentals make every journey smoother.",
-                "timeHeading": "When to Apply Them",
-                "timeBody": "Start planning two to four weeks before departure, then revisit the checklist the night before you fly.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Carry a valid passport and check visa requirements early.",
-                  "Keep digital and paper copies of bookings in one folder.",
-                  "Pack a small day kit with chargers, medicines, and adapters.",
-                  "Build buffer time between flights and transfers.",
-                  "Share your itinerary with someone at home."
-                ],
-                "quote": {
-                  "text": "Great travel is less about luck and more about thoughtful preparation.",
-                  "attribution": "Wanderlust Desk"
-                },
-                "closing": "Ready to experience airport transfer hacks that save time and money for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "eco-friendly-travel-habits",
-                "image": "/TopDestination/Bali_View.jpg",
-                "date": "24 Mar 2026",
-                "category": "Travel Inspiration",
-                "title": "Eco-Friendly Habits That Improve Every Trip",
-                "description": "Small choices — refill bottles, local guides, slower travel — with a big positive impact.",
-                "author": "Journey Notes",
-                "featuredImage": "/Our_blogs/img3.jpg",
-                "intro": [
-                  "Small choices — refill bottles, local guides, slower travel — with a big positive impact. In this guide, we unpack practical ideas around eco-friendly habits that improve every trip so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why This Journey Inspires",
-                "whyBody": "Travel resets your perspective. The right itinerary blends wonder, rest, and a few moments that stay with you long after you return.",
-                "placesHeading": "Moments Worth Chasing",
-                "placesBody": "Look for golden-hour viewpoints, quiet cafes, and experiences that feel personal rather than purely Instagrammable.",
-                "timeHeading": "Best Season for Inspiration",
-                "timeBody": "Travel when the light, festivals, or landscapes speak to the kind of memories you want to create.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Start with one big dream, then build a realistic route around it.",
-                  "Leave room for unplanned discoveries.",
-                  "Capture notes and photos, not only highlights.",
-                  "Talk to locals for offbeat recommendations.",
-                  "Protect rest days so inspiration does not turn into exhaustion."
-                ],
-                "quote": {
-                  "text": "Inspiration is found in the quiet moments between the famous sights.",
-                  "attribution": "Journey Notes"
-                },
-                "closing": "Ready to experience eco-friendly habits that improve every trip for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "winter-europe-packing-list",
-                "image": "/Our_blogs/img2.jpg",
-                "date": "20 Mar 2026",
-                "category": "Packing Guide",
-                "title": "Winter Europe Packing List That Actually Works",
-                "description": "Warm layers, waterproof shoes, and day-bag essentials for cold-city sightseeing.",
-                "author": "Travel Explorer",
-                "featuredImage": "/TopDestination/Switzerland.jpg",
-                "intro": [
-                  "Warm layers, waterproof shoes, and day-bag essentials for cold-city sightseeing. In this guide, we unpack practical ideas around winter europe packing list that actually works so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Smart Packing Matters",
-                "whyBody": "Traveling light keeps you flexible, reduces baggage fees, and makes airport days far less stressful.",
-                "placesHeading": "What to Pack For",
-                "placesBody": "These packing ideas work for city walks, short flights, and changing weather across temperate destinations.",
-                "timeHeading": "When to Pack",
-                "timeBody": "Lay everything out two nights before departure, then remove three items you can live without.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Choose versatile layers in a coordinated color palette.",
-                  "Use packing cubes to separate outfits and essentials.",
-                  "Keep liquids, chargers, and documents in your personal item.",
-                  "Wear your bulkiest shoes on travel days.",
-                  "Leave space for souvenirs on the return trip."
-                ],
-                "quote": {
-                  "text": "The best suitcase is the one you barely notice carrying.",
-                  "attribution": "Travel Explorer"
-                },
-                "closing": "Ready to experience winter europe packing list that actually works for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "student-budget-asia-route",
-                "image": "/Tour_Packages/img2.jpg",
-                "date": "16 Mar 2026",
-                "category": "Budget Travel",
-                "title": "Student Budget Route Through Southeast Asia",
-                "description": "Affordable hubs, night buses, and free activities for a memorable backpacking season.",
-                "author": "Tour.com Editors",
-                "featuredImage": "/TopDestination/Maldives.jpg",
-                "intro": [
-                  "Affordable hubs, night buses, and free activities for a memorable backpacking season. In this guide, we unpack practical ideas around student budget route through southeast asia so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Budget Travel Works",
-                "whyBody": "Spending wisely does not mean missing out. Smart timing and local choices stretch your budget across more experiences.",
-                "placesHeading": "Where Value Is Highest",
-                "placesBody": "Look for destinations with strong local transit, affordable eats, and free or low-cost cultural attractions.",
-                "timeHeading": "Best Time to Save",
-                "timeBody": "Shoulder seasons and midweek flights usually unlock the best combination of price and comfort.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Set a daily spend limit and track it loosely.",
-                  "Mix one special meal with local street food.",
-                  "Choose centrally located stays to cut transport costs.",
-                  "Book flexible tickets when plans may change.",
-                  "Use free walking tours and public parks for exploration."
-                ],
-                "quote": {
-                  "text": "Travel far by spending smart, not by spending less on every moment.",
-                  "attribution": "Tour.com Editors"
-                },
-                "closing": "Ready to experience student budget route through southeast asia for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "hill-station-monsoon-weekend",
-                "image": "/Tour_Packages/img1.jpg",
-                "date": "12 Mar 2026",
-                "category": "Weekend Getaways",
-                "title": "Hill Station Weekends When the City Feels Too Hot",
-                "description": "Cool weather, cafe trails, and scenic drives for a quick mountain reset.",
-                "author": "Wanderlust Desk",
-                "featuredImage": "/TopDestination/Bali_View.jpg",
-                "intro": [
-                  "Cool weather, cafe trails, and scenic drives for a quick mountain reset. In this guide, we unpack practical ideas around hill station weekends when the city feels too hot so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Short Trips Matter",
-                "whyBody": "A well-planned weekend escape can reset your energy without burning vacation days or your budget.",
-                "placesHeading": "Easy Escapes Nearby",
-                "placesBody": "Choose destinations within a short flight or overnight train so travel time does not eat the whole break.",
-                "timeHeading": "Best Weekend Timing",
-                "timeBody": "Leave Friday evening when possible, and keep Sunday afternoon free for a relaxed return.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Pack light so transit stays effortless.",
-                  "Pre-book one highlight activity and keep the rest flexible.",
-                  "Choose stays with great breakfasts to save time.",
-                  "Avoid overstuffing the itinerary with long transfers.",
-                  "Bring a simple rain or sun backup plan."
-                ],
-                "quote": {
-                  "text": "Sometimes two days away is all it takes to feel brand new.",
-                  "attribution": "Wanderlust Desk"
-                },
-                "closing": "Ready to experience hill station weekends when the city feels too hot for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
-              },
-              {
-                "slug": "scuba-snorkeling-first-trip",
-                "image": "/TopDestination/Maldives.jpg",
-                "date": "08 Mar 2026",
-                "category": "Adventure Travel",
-                "title": "Scuba and Snorkeling Tips for Your First Ocean Trip",
-                "description": "Certification basics, reef etiquette, and how to pick beginner-friendly dive spots.",
-                "author": "Journey Notes",
-                "featuredImage": "/TopDestination/Dubai.jpg",
-                "intro": [
-                  "Certification basics, reef etiquette, and how to pick beginner-friendly dive spots. In this guide, we unpack practical ideas around scuba and snorkeling tips for your first ocean trip so you can travel with more clarity and less stress.",
-                  "Whether you are researching options for the first time or refining an existing itinerary, these insights from Tour.com help you turn inspiration into a trip that feels personal and well planned."
-                ],
-                "whyHeading": "Why Choose Adventure",
-                "whyBody": "Adventure travel turns landscapes into playgrounds — with the right preparation, thrills stay safe and memorable.",
-                "placesHeading": "Top Adventure Spots",
-                "placesBody": "Beginner-friendly routes and guided experiences make mountains, deserts, and oceans accessible without unnecessary risk.",
-                "timeHeading": "Best Time for Adventure",
-                "timeBody": "Check seasonal conditions carefully. Weather windows matter more for outdoor activities than for city sightseeing.",
-                "tipsHeading": "Travel Tips",
-                "tips": [
-                  "Confirm operator credentials and safety standards.",
-                  "Pack weather-ready layers and broken-in footwear.",
-                  "Disclose fitness levels honestly before booking.",
-                  "Carry travel insurance that covers adventure sports.",
-                  "Hydrate early and respect altitude or sea conditions."
-                ],
-                "quote": {
-                  "text": "The best adventures respect nature as much as they chase excitement.",
-                  "attribution": "Journey Notes"
-                },
-                "closing": "Ready to experience scuba and snorkeling tips for your first ocean trip for yourself? Let Tour.com craft a personalized itinerary with stays, transfers, and local experiences that match your pace."
               }
             ],
             "bannerDetailTitle": "Blog Detail",
@@ -6177,35 +5654,35 @@
               "categories": [
                 {
                   "name": "Travel Tips",
-                  "count": 7
+                  "count": 5
                 },
                 {
                   "name": "Travel Inspiration",
-                  "count": 6
+                  "count": 4
                 },
                 {
                   "name": "Destination Guide",
-                  "count": 5
+                  "count": 3
                 },
                 {
                   "name": "Adventure Travel",
-                  "count": 5
+                  "count": 3
                 },
                 {
                   "name": "Cultural Experiences",
-                  "count": 5
+                  "count": 3
                 },
                 {
                   "name": "Packing Guide",
-                  "count": 4
+                  "count": 2
                 },
                 {
                   "name": "Budget Travel",
-                  "count": 4
+                  "count": 2
                 },
                 {
                   "name": "Weekend Getaways",
-                  "count": 4
+                  "count": 2
                 }
               ],
               "cta": {
@@ -6488,7 +5965,7 @@
                   },
                   {
                     "name": "Destinations",
-                    "href": "/destinations"
+                    "href": "/top-destinations"
                   }
                 ]
               },

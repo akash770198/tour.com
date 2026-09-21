@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import OurServices from "@/components/OurServices";
@@ -8,12 +7,10 @@ import TopDestinations from "@/components/TopDestinations";
 import Testimonials from "@/components/Testimonials";
 import Stats from "@/components/Stats";
 import Blog from "@/components/Blog";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-white">
-      <Navbar />
+    <div className="flex flex-col flex-1 font-sans bg-white">
       <Hero />
       <TopDestinations />
       <AboutUs />
@@ -23,7 +20,6 @@ export default function Home() {
       <Testimonials />
       <Stats />
       <Blog />
-      <Footer />
     </div>
   );
 }

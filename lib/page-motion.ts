@@ -1,10 +1,10 @@
 export const fadeUp = {
-  initial: { opacity: 0, y: 28 },
+  initial: { opacity: 0.2, y: 16 },
   animate: { opacity: 1, y: 0 },
 };
 
 export const fadeIn = {
-  initial: { opacity: 0 },
+  initial: { opacity: 0.25 },
   animate: { opacity: 1 },
 };
 
@@ -30,13 +30,13 @@ export function staggerDelay(index: number, base = 0.06) {
 }
 
 export const flipUpWord = {
-  initial: { opacity: 0, rotateX: 90, y: "40%", transformOrigin: "50% 100%" },
+  initial: { opacity: 0.35, rotateX: 55, y: "28%", transformOrigin: "50% 100%" },
   animate: { opacity: 1, rotateX: 0, y: "0%" },
 };
 
-export function flipUpWordTransition(index: number, baseDelay = 0.12, start = 0.15) {
+export function flipUpWordTransition(index: number, baseDelay = 0.08, start = 0.05) {
   return {
-    duration: 0.55,
+    duration: 0.4,
     ease: [0.22, 1, 0.36, 1] as const,
     delay: start + index * baseDelay,
   };
