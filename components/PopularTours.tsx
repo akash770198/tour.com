@@ -161,14 +161,14 @@ export default function PopularTours({ data, className }: SectionProps<TourPopul
             <div className="flex items-center justify-center space-x-4 mt-2">
               <button 
                 onClick={moveLeft}
-                className="w-12 h-12 rounded-full bg-[#e3f4f8] hover:bg-[#36b9b3] hover:text-white text-[#0d2a4c] flex items-center justify-center shadow-md transition-colors"
+                className="w-12 h-12 rounded-full bg-[#e3f4f8] text-[#0d2a4c] flex items-center justify-center shadow-md transition-colors active:bg-[#008cba] active:text-white"
                 aria-label="Previous slide"
               >
                 <ChevronLeft size={24} />
               </button>
               <button 
                 onClick={moveRight}
-                className="w-12 h-12 rounded-full bg-[#008cba] hover:bg-[#007ba3] text-white flex items-center justify-center shadow-md transition-colors"
+                className="w-12 h-12 rounded-full bg-[#e3f4f8] text-[#0d2a4c] flex items-center justify-center shadow-md transition-colors active:bg-[#008cba] active:text-white"
                 aria-label="Next slide"
               >
                 <ChevronRight size={24} />

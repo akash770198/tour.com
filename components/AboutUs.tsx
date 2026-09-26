@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Users, Award, Handshake, Globe, Plane, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { site, SectionProps, TourAboutData } from "@/data";
 
-export default function AboutUs({ data, className }: SectionProps<TourAboutData> = {}) {
+export default function AboutUs({ data, className, showMoreLink = true }: SectionProps<TourAboutData> & { showMoreLink?: boolean } = {}) {
   const aboutUsSection = data || site.aboutUsSection;
 
   return (
@@ -38,11 +39,11 @@ export default function AboutUs({ data, className }: SectionProps<TourAboutData>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
               {aboutUsSection.features.map((feature, idx) => (
                 <div key={idx} className="flex items-start">
-                  <div className="w-14 h-14 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-5">
-                    {idx === 0 && <Users size={24} className="text-[#0d2a4c]" />}
-                    {idx === 1 && <Award size={24} className="text-[#0d2a4c]" />}
-                    {idx === 2 && <Handshake size={24} className="text-[#0d2a4c]" />}
-                    {idx === 3 && <Globe size={24} className="text-[#0d2a4c]" />}
+                  <div className="group w-14 h-14 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#36b9b3] hover:shadow-md">
+                    {idx === 0 && <Users size={24} className="text-[#0d2a4c] transition-all duration-300 group-hover:scale-110 group-hover:text-white" />}
+                    {idx === 1 && <Award size={24} className="text-[#0d2a4c] transition-all duration-300 group-hover:scale-110 group-hover:text-white" />}
+                    {idx === 2 && <Handshake size={24} className="text-[#0d2a4c] transition-all duration-300 group-hover:scale-110 group-hover:text-white" />}
+                    {idx === 3 && <Globe size={24} className="text-[#0d2a4c] transition-all duration-300 group-hover:scale-110 group-hover:text-white" />}
                   </div>
                   <div>
                     <h4 className="text-[#0d2a4c] font-bold text-lg mb-1">{feature.title}</h4>
@@ -52,11 +53,13 @@ export default function AboutUs({ data, className }: SectionProps<TourAboutData>
               ))}
             </div>
 
-            <div>
-              <button className="bg-[#008cba] hover:bg-[#007ba3] text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 shadow-md group">
-                {aboutUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            {showMoreLink && (
+              <div>
+                <Link href="/about-us" className="bg-[#008cba] hover:bg-[#007ba3] text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 inline-flex items-center gap-2 shadow-md group">
+                  {aboutUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            )}
           </motion.div>
 
           {/* Right Column: Images */}

@@ -1,15 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { site, SectionProps, TourTestimonialData } from "@/data";
 
+const AUTO_SLIDE_MS = 5000;
+
 export default function Testimonials({ data, className }: SectionProps<TourTestimonialData> = {}) {
   const testimonialSection = data || site.testimonialSection;
   const { items } = testimonialSection;
   const [currentIndex, setCurrentIndex] = useState(2); // Start at 2 so there's enough history for prev items
+  const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
@@ -18,6 +21,16 @@ export default function Testimonials({ data, className }: SectionProps<TourTesti
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
+
+  useEffect(() => {
+    if (isPaused || items.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % items.length);
+    }, AUTO_SLIDE_MS);
+
+    return () => clearInterval(interval);
+  }, [isPaused, items.length]);
 
   const getVisibleIndices = () => {
     const visible = [];
@@ -35,7 +48,17 @@ export default function Testimonials({ data, className }: SectionProps<TourTesti
   );
 
   return (
-    <section className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}>
+    <section
+      className={`py-16 bg-white w-full overflow-hidden ${className ?? ""}`}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setIsPaused(false);
+        }
+      }}
+    >
       <div className="container mx-auto px-4 max-w-[1340px]">
         
         {/* Header */}
@@ -61,14 +84,14 @@ export default function Testimonials({ data, className }: SectionProps<TourTesti
           <div className="flex items-center space-x-4 mt-6 md:mt-0">
             <button 
               onClick={prevSlide}
-              className="w-14 h-14 rounded-full border border-gray-200 hover:bg-[#008cba] hover:border-[#008cba] text-gray-500 hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+              className="w-14 h-14 rounded-full border border-gray-200 text-gray-500 active:bg-[#006699] active:border-[#006699] active:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
               aria-label="Previous slide"
             >
               <ChevronLeft size={24} />
             </button>
             <button 
               onClick={nextSlide}
-              className="w-14 h-14 rounded-full bg-[#006699] hover:bg-[#005580] text-white flex items-center justify-center transition-all duration-300 shadow-md"
+              className="w-14 h-14 rounded-full border border-gray-200 text-gray-500 active:bg-[#006699] active:border-[#006699] active:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
               aria-label="Next slide"
             >
               <ChevronRight size={24} />

@@ -7,9 +7,9 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col flex-1 font-sans bg-white">
       <PageBanner title="About Us" />
-      <AboutUsSection />
+      <AboutUsSection showMoreLink={false} />
       <Stats />
-      <WhyChooseUs />
+      <WhyChooseUs showMoreLink={false} />
     </div>
   );
 }

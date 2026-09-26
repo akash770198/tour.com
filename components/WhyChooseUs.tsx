@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { site, SectionProps, TourWhyChooseUsData } from "@/data";
 
-export default function WhyChooseUs({ data, className }: SectionProps<TourWhyChooseUsData> = {}) {
+export default function WhyChooseUs({ data, className, showMoreLink = true }: SectionProps<TourWhyChooseUsData> & { showMoreLink?: boolean } = {}) {
   const whyChooseUsSection = data || site.whyChooseUsSection;
 
   return (
@@ -53,11 +54,13 @@ export default function WhyChooseUs({ data, className }: SectionProps<TourWhyCho
               ))}
             </div>
 
-            <div>
-              <button className="bg-[#006699] hover:bg-[#005580] text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 shadow-md group">
-                {whyChooseUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            {showMoreLink && (
+              <div>
+                <Link href="/why-choose-us" className="bg-[#006699] hover:bg-[#005580] text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 inline-flex items-center gap-2 shadow-md group">
+                  {whyChooseUsSection.buttonText} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            )}
           </motion.div>
 
           {/* Right Column: Images Collage */}

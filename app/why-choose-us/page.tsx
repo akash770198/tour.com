@@ -6,7 +6,7 @@ export default function WhyChooseUsPage() {
   return (
     <div className="flex flex-col flex-1 font-sans bg-white">
       <PageBanner title="Why Choose Us" />
-      <WhyChooseUs />
+      <WhyChooseUs showMoreLink={false} />
       <Stats />
     </div>
   );
