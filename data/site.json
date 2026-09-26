@@ -1837,14 +1837,14 @@
                 "image": "/Testimonial_tour/img1.png",
                 "name": "Emily Watson",
                 "title": "Adventure Seeker",
-                "quote": "The best travel agency I've ever worked with! The itinerary was flawless.",
+                "quote": "Working with this travel platform has been an amazing experience. The team planned everything perfectly, from hotels to local experiences. Our trip was smooth, well-organized, and truly memorable. Highly recommended for anyone who loves to explore the world!",
                 "rating": 5
               },
               {
                 "image": "/Testimonial_tour/img4.png",
                 "name": "Michael Brown",
                 "title": "Business Traveler",
-                "quote": "Professional, efficient, and highly reliable. They handle all my corporate trips.",
+                "quote": "Working with this travel platform has been an amazing experience. The team planned everything perfectly, from hotels to local experiences. Our trip was smooth, well-organized, and truly memorable. Highly recommended for anyone who loves to explore the world!",
                 "rating": 4
               },
               {
@@ -1858,14 +1858,14 @@
                 "image": "/Testimonial_tour/img5.png",
                 "name": "David Clark",
                 "title": "Photographer",
-                "quote": "Found the most picturesque locations thanks to their amazing recommendations.",
+                "quote": "Working with this travel platform has been an amazing experience. The team planned everything perfectly, from hotels to local experiences. Our trip was smooth, well-organized, and truly memorable. Highly recommended for anyone who loves to explore the world!",
                 "rating": 5
               },
               {
                 "image": "/Testimonial_tour/img3.png",
                 "name": "Jessica Lee",
                 "title": "Family Traveler",
-                "quote": "They made our family vacation stress-free and enjoyable for everyone.",
+                "quote": "Working with this travel platform has been an amazing experience. The team planned everything perfectly, from hotels to local experiences. Our trip was smooth, well-organized, and truly memorable. Highly recommended for anyone who loves to explore the world!",
                 "rating": 5
               }
             ]
@@ -1959,12 +1959,16 @@
                 "href": "/about-us"
               },
               {
-                "name": "Destinations",
-                "href": "/destinations"
+                "name": "Top Destinations",
+                "href": "/top-destinations"
               },
               {
                 "name": "Tour Packages",
                 "href": "/packages"
+              },
+              {
+                "name": "Services",
+                "href": "/services"
               },
               {
                 "name": "Blog",
@@ -2067,14 +2071,6 @@
               "links": [
                 {
                   "name": "Privacy Policy",
-                  "href": "/privacy-policy"
-                },
-                {
-                  "name": "Terms & Conditions",
-                  "href": "/privacy-policy"
-                },
-                {
-                  "name": "Cancellation Policy",
                   "href": "/privacy-policy"
                 },
                 {
@@ -2981,7 +2977,7 @@
       "TourPackages": {
         "variants": {
           "TourPackagesPage1": {
-            "perPage": 8,
+            "perPage": 9,
             "priceMin": 0,
             "priceMax": 500000,
             "priceStep": 5000,
