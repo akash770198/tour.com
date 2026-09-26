@@ -62,13 +62,13 @@ export default function OurServices({ data, className }: SectionProps<TourServic
               className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col relative group"
             >
               {/* Image Half */}
-              <div className="relative w-full h-48 bg-gray-200">
+              <Link href={item.href} className="relative w-full h-48 bg-gray-200 block">
                 {item.image ? (
                   <Image src={item.image} alt={item.title} fill className="object-cover" />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">Image Placeholder</div>
                 )}
-              </div>
+              </Link>
 
               {/* Floating Icon */}
               <div className="absolute top-[165px] left-6 w-14 h-14 bg-[#008cba] rounded-full border-4 border-white flex items-center justify-center text-white z-10 shadow-sm">
@@ -77,10 +77,12 @@ export default function OurServices({ data, className }: SectionProps<TourServic
 
               {/* Content Half */}
               <div className="p-6 pt-10 flex flex-col flex-1">
-                <h3 className="text-xl font-bold text-[#0d2a4c] mb-2">{item.title}</h3>
+                <h3 className="text-xl font-bold text-[#0d2a4c] mb-2">
+                  <Link href={item.href} className="hover:text-[#008cba] transition-colors">{item.title}</Link>
+                </h3>
                 <p className="text-gray-500 text-sm mb-6 flex-1">{item.description}</p>
                 
-                <Link href={"href" in item && item.href ? item.href : "#"} className="flex items-center justify-between group">
+                <Link href={item.href} className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-[#008cba] group-hover:text-[#007ba3] transition-colors">{item.linkText}</span>
                   <div className="w-8 h-8 rounded-full bg-[#e3f4f8] flex items-center justify-center text-[#008cba] group-hover:bg-[#008cba] group-hover:text-white transition-colors">
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

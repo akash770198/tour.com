@@ -993,14 +993,16 @@
                 "image": "/services_tour/flight.jpg",
                 "title": "Flight Booking",
                 "description": "Book domestic and international flights at the best prices.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/flight-booking"
               },
               {
                 "icon": "Building",
                 "image": "/services_tour/hotel.jpg",
                 "title": "Hotel Booking",
                 "description": "Comfortable stays for every budget and every destination.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/hotel-booking"
               },
               {
                 "icon": "Map",
@@ -1008,42 +1010,47 @@
                 "title": "Tour Packages",
                 "description": "Curated tour packages for family, couples and groups.",
                 "linkText": "Learn More",
-                "href": "/packages"
+                "href": "/services/tour-packages"
               },
               {
                 "icon": "Bus",
                 "image": "/services_tour/travel.jpg",
                 "title": "Transport Services",
                 "description": "Reliable airport transfers and local transport for your convenience.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/transport-services"
               },
               {
                 "icon": "FileText",
                 "image": "/services_tour/visa.jpg",
                 "title": "Visa Assistance",
                 "description": "Hassle-free visa support for your international travel.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/visa-assistance"
               },
               {
                 "icon": "ShieldCheck",
                 "image": "/services_tour/insurance.jpg",
                 "title": "Travel Insurance",
                 "description": "Travel with peace of mind and complete protection.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/travel-insurance"
               },
               {
                 "icon": "Compass",
                 "image": "/services_tour/guide.jpg",
                 "title": "Travel Guide",
                 "description": "Expert guidance to help you explore the best places.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/travel-guide"
               },
               {
                 "icon": "Headphones",
                 "image": "/services_tour/support.jpg",
                 "title": "24/7 Support",
                 "description": "We are here to assist you anytime, anywhere.",
-                "linkText": "Learn More"
+                "linkText": "Learn More",
+                "href": "/services/247-support"
               }
             ]
           }
