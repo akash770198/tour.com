@@ -93,6 +93,15 @@ export default function Blog({ data, className }: SectionProps<TourBlogData> = {
             </motion.div>
           ))}
         </div>
+
+        <div className="flex justify-center mt-12">
+          <Link
+            href="/blog"
+            className="bg-[#36b9b3] hover:bg-[#2c9893] text-white px-8 py-3.5 rounded-full font-medium transition-colors flex items-center gap-2 shadow-md"
+          >
+            {blogSection.buttonText} <ArrowRight size={18} />
+          </Link>
+        </div>
       </div>
     </section>
   );

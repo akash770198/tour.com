@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight, Star, Calendar, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import { site, SectionProps, TourPopularToursData } from "@/data";
@@ -112,7 +113,7 @@ export default function PopularTours({ data, className }: SectionProps<TourPopul
                   className="box-border shrink-0"
                   style={{ width: cardWidth }}
                 >
-                  <div className="relative h-full aspect-[4/5] rounded-3xl overflow-hidden group shadow-lg cursor-pointer transition-all duration-300">
+                  <Link href={item.href} className="relative h-full aspect-[4/5] rounded-3xl overflow-hidden group shadow-lg block transition-all duration-300">
                     {/* Background Image */}
                     <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     
@@ -150,7 +151,7 @@ export default function PopularTours({ data, className }: SectionProps<TourPopul
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </motion.div>

@@ -413,31 +413,36 @@
                 "name": "Maldives",
                 "image": "/TopDestination/Maldives.jpg",
                 "rotation": "-3deg",
-                "linkText": "Explore Destination"
+                "linkText": "Explore Destination",
+                "href": "/packages?destination=Maldives"
               },
               {
                 "name": "Greece",
                 "image": "/TopDestination/Greece.jpg",
                 "rotation": "3deg",
-                "linkText": "Explore Destination"
+                "linkText": "Explore Destination",
+                "href": "/packages?destination=Greece"
               },
               {
                 "name": "Bali",
                 "image": "/TopDestination/Bali_View.jpg",
                 "rotation": "0deg",
-                "linkText": "Explore Destination"
+                "linkText": "Explore Destination",
+                "href": "/packages?destination=Indonesia"
               },
               {
                 "name": "Switzerland",
                 "image": "/TopDestination/Switzerland.jpg",
                 "rotation": "-3deg",
-                "linkText": "Explore Destination"
+                "linkText": "Explore Destination",
+                "href": "/packages?destination=Switzerland"
               },
               {
                 "name": "Dubai",
                 "image": "/TopDestination/Dubai.jpg",
                 "rotation": "3deg",
-                "linkText": "Explore Destination"
+                "linkText": "Explore Destination",
+                "href": "/packages?destination=UAE"
               }
             ],
             "buttonText": "View All Destinations"
@@ -938,7 +943,8 @@
                 "price": "$ 1,299 USD",
                 "originalPrice": "$1,479 USD",
                 "rating": "5.0 (333)",
-                "duration": "5 Nights - 6 Days"
+                "duration": "5 Nights - 6 Days",
+                "href": "/packages/maldives-getaway"
               },
               {
                 "discount": "10% OFF",
@@ -947,7 +953,8 @@
                 "price": "$ 1,199 USD",
                 "originalPrice": "$1,399 USD",
                 "rating": "5.0 (333)",
-                "duration": "7 Nights - 8 Days"
+                "duration": "7 Nights - 8 Days",
+                "href": "/packages/greece-island-hopping"
               },
               {
                 "discount": "15% OFF",
@@ -956,7 +963,8 @@
                 "price": "$ 899 USD",
                 "originalPrice": "$1,049 USD",
                 "rating": "5.0 (333)",
-                "duration": "6 Nights - 7 Days"
+                "duration": "6 Nights - 7 Days",
+                "href": "/packages/bali-escape"
               },
               {
                 "discount": "10% OFF",
@@ -965,7 +973,8 @@
                 "price": "$ 999 USD",
                 "originalPrice": "$1,149 USD",
                 "rating": "5.0 (333)",
-                "duration": "4 Nights - 5 Days"
+                "duration": "4 Nights - 5 Days",
+                "href": "/packages/dubai-city-tour"
               },
               {
                 "discount": "8% OFF",
@@ -974,7 +983,8 @@
                 "price": "$ 1,499 USD",
                 "originalPrice": "$1,699 USD",
                 "rating": "4.9 (210)",
-                "duration": "6 Nights - 7 Days"
+                "duration": "6 Nights - 7 Days",
+                "href": "/packages/switzerland-highlights"
               }
             ]
           }
@@ -1914,6 +1924,7 @@
             "headingPart1": "Latest",
             "headingPart2": "Travel Stories",
             "description": "Tips, guides and inspiring stories to fuel your next adventure.",
+            "buttonText": "View All Blogs",
             "items": [
               {
                 "slug": "essential-travel-tips-hassle-free-vacation",

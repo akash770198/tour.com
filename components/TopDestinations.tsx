@@ -48,18 +48,20 @@ export default function TopDestinations({ data, className }: SectionProps<TourTo
               whileHover={{ y: -10, rotate: item.rotation, scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.4 }}
-              className="group relative w-full aspect-[3/4] rounded-[2rem] overflow-hidden cursor-pointer"
+              className="group relative w-full aspect-[3/4] rounded-[2rem] overflow-hidden"
             >
-              <div className="w-full aspect-[4/3] rounded-3xl bg-gray-100 overflow-hidden mb-5 shadow-lg relative group-hover:shadow-xl transition-shadow duration-300">
-                {item.image ? (
-                  <Image src={item.image} alt={item.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">Image Placeholder</div>
-                )}
-              </div>
-              <h3 className="text-xl font-bold text-[#0d2a4c] mb-1">{item.name}</h3>
-              <Link href="#" className="text-sm text-[#36b9b3] hover:text-[#2c9893] transition-colors">{item.linkText}</Link>
-              <div className="w-8 h-[3px] bg-[#36b9b3] mt-2 rounded-full"></div>
+              <Link href={item.href} className="block">
+                <div className="w-full aspect-[4/3] rounded-3xl bg-gray-100 overflow-hidden mb-5 shadow-lg relative group-hover:shadow-xl transition-shadow duration-300">
+                  {item.image ? (
+                    <Image src={item.image} alt={item.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">Image Placeholder</div>
+                  )}
+                </div>
+                <h3 className="text-xl font-bold text-[#0d2a4c] mb-1 group-hover:text-[#36b9b3] transition-colors">{item.name}</h3>
+                <span className="text-sm text-[#36b9b3] group-hover:text-[#2c9893] transition-colors">{item.linkText}</span>
+                <div className="w-8 h-[3px] bg-[#36b9b3] mt-2 rounded-full"></div>
+              </Link>
             </motion.div>
           ))}
         </div>
