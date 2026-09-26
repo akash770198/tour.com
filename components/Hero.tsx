@@ -89,13 +89,13 @@ export default function Hero({ data, className }: SectionProps<TourBannerData> =
           <div className="hidden md:flex flex-col gap-4 z-20">
             <button 
               onClick={handlePrev}
-              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-[#36b9b3] hover:shadow-lg transition-all"
+              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:bg-[#008cba] hover:text-white hover:shadow-lg transition-all"
             >
               <ArrowLeft size={24} />
             </button>
             <button 
               onClick={handleNext}
-              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-[#36b9b3] hover:shadow-lg transition-all"
+              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:bg-[#008cba] hover:text-white hover:shadow-lg transition-all"
             >
               <ArrowRight size={24} />
             </button>

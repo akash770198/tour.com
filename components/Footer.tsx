@@ -33,17 +33,17 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
           />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 max-w-[1340px] pb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 text-[#3b4759]">
+        <div className="container mx-auto relative z-10 max-w-[1340px] px-4 pb-20 lg:pr-32 xl:pr-40 2xl:pr-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.85fr_0.95fr_1fr_1.15fr] gap-8 lg:gap-5 xl:gap-7 text-[#3b4759]">
             
             {/* Column 1: Logo & Description */}
-            <div className="lg:col-span-4 flex flex-col items-start pr-4 border-r-0 lg:border-r border-gray-200">
+            <div className="flex flex-col items-start sm:col-span-2 lg:col-span-1 lg:pr-3 lg:border-r border-gray-200">
               <div className="flex-shrink-0 mb-6">
                 <Link href="/" aria-label="Go to home page">
                   <Image src={navbar.logo} alt="Logo" width={180} height={60} className="h-12 w-auto object-contain" />
                 </Link>
               </div>
-              <p className="text-sm leading-relaxed mb-6">
+              <p className="text-sm leading-relaxed mb-6 max-w-md">
                 {footer.description}
               </p>
               <div className="flex space-x-3 mb-6">
@@ -69,8 +69,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
             </div>
 
             {/* Column 2: Quick Links */}
-            <div className="lg:col-span-2 flex flex-col border-r-0 lg:border-r border-gray-200 pl-0 lg:pl-6">
-              <h3 className="text-lg font-bold text-[#0d2a4c] mb-6 relative pb-2">
+            <div className="flex flex-col min-w-0 lg:pl-3 lg:border-r border-gray-200">
+              <h3 className="text-base xl:text-lg font-bold text-[#0d2a4c] mb-5 relative pb-2">
                 Quick Links
                 <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#36b9b3]"></span>
               </h3>
@@ -78,8 +78,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
                 {footer.quickLinks.map((link, idx) => (
                   <li key={idx}>
                     <Link href={link.href} className="text-sm flex items-center hover:text-[#36b9b3] transition-colors">
-                      <ChevronRight size={14} className="text-[#36b9b3] mr-2" />
-                      {link.name}
+                      <ChevronRight size={14} className="text-[#36b9b3] mr-2 shrink-0" />
+                      <span>{link.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -87,8 +87,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
             </div>
 
             {/* Column 3: Our Services */}
-            <div className="lg:col-span-2 flex flex-col border-r-0 lg:border-r border-gray-200 pl-0 lg:pl-6">
-              <h3 className="text-lg font-bold text-[#0d2a4c] mb-6 relative pb-2">
+            <div className="flex flex-col min-w-0 lg:pl-3 lg:border-r border-gray-200">
+              <h3 className="text-base xl:text-lg font-bold text-[#0d2a4c] mb-5 relative pb-2">
                 Our Services
                 <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#36b9b3]"></span>
               </h3>
@@ -96,8 +96,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
                 {footer.services.map((link, idx) => (
                   <li key={idx}>
                     <Link href={link.href} className="text-sm flex items-center hover:text-[#36b9b3] transition-colors">
-                      <ChevronRight size={14} className="text-[#36b9b3] mr-2" />
-                      {link.name}
+                      <ChevronRight size={14} className="text-[#36b9b3] mr-2 shrink-0" />
+                      <span>{link.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -105,8 +105,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
             </div>
 
             {/* Column 4: Popular Destinations */}
-            <div className="lg:col-span-2 flex flex-col border-r-0 lg:border-r border-gray-200 pl-0 lg:pl-6">
-              <h3 className="text-lg font-bold text-[#0d2a4c] mb-6 relative pb-2">
+            <div className="flex flex-col min-w-0 lg:pl-3 lg:border-r border-gray-200">
+              <h3 className="text-base xl:text-lg font-bold text-[#0d2a4c] mb-5 relative pb-2">
                 Popular Destinations
                 <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#36b9b3]"></span>
               </h3>
@@ -114,8 +114,8 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
                 {footer.destinations.map((link, idx) => (
                   <li key={idx}>
                     <Link href={link.href} className="text-sm flex items-center hover:text-[#36b9b3] transition-colors">
-                      <ChevronRight size={14} className="text-[#36b9b3] mr-2" />
-                      {link.name}
+                      <ChevronRight size={14} className="text-[#36b9b3] mr-2 shrink-0" />
+                      <span>{link.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -123,49 +123,49 @@ export default function Footer({ data, className }: SectionProps<TourFooterData>
             </div>
 
             {/* Column 5: Contact Us */}
-            <div className="lg:col-span-2 flex flex-col pl-0 lg:pl-6">
-              <h3 className="text-lg font-bold text-[#0d2a4c] mb-6 relative pb-2">
+            <div className="flex flex-col min-w-0 sm:col-span-2 lg:col-span-1 lg:pl-3">
+              <h3 className="text-base xl:text-lg font-bold text-[#0d2a4c] mb-5 relative pb-2">
                 Contact Us
                 <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#36b9b3]"></span>
               </h3>
-              <div className="flex flex-col space-y-5">
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-4">
-                    <Phone size={18} className="text-[#36b9b3]" />
+              <div className="flex flex-col space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="group w-8 h-8 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0">
+                    <Phone size={15} className="text-[#36b9b3] transition-transform duration-200 group-hover:scale-110 group-hover:text-[#008cba]" />
                   </div>
-                  <div className="flex flex-col pt-1">
-                    <a href={telHref} className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors">
+                  <div className="flex flex-col min-w-0 pt-0.5">
+                    <a href={telHref} className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors break-words">
                       {footer.contact.phone}
                     </a>
-                    <span className="text-xs text-gray-500 mt-1">{footer.contact.timing}</span>
+                    <span className="text-xs text-gray-500 mt-1 leading-snug">{footer.contact.timing}</span>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-4">
-                    <Mail size={18} className="text-[#36b9b3]" />
+                <div className="flex items-start gap-3">
+                  <div className="group w-8 h-8 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0">
+                    <Mail size={15} className="text-[#36b9b3] transition-transform duration-200 group-hover:scale-110 group-hover:text-[#008cba]" />
                   </div>
-                  <div className="flex flex-col pt-1">
+                  <div className="flex flex-col min-w-0 pt-0.5">
                     <a
                       href={`mailto:${footer.contact.email}`}
-                      className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors"
+                      className="font-semibold text-sm text-[#0d2a4c] hover:text-[#36b9b3] transition-colors break-words"
                     >
                       {footer.contact.email}
                     </a>
-                    <span className="text-xs text-gray-500 mt-1">{footer.contact.emailSub}</span>
+                    <span className="text-xs text-gray-500 mt-1 leading-snug">{footer.contact.emailSub}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0 mr-4">
-                    <MapPin size={18} className="text-[#36b9b3]" />
+                <div className="flex items-start gap-3">
+                  <div className="group w-8 h-8 rounded-full bg-[#e3f4f8] flex items-center justify-center flex-shrink-0">
+                    <MapPin size={15} className="text-[#36b9b3] transition-transform duration-200 group-hover:scale-110 group-hover:text-[#008cba]" />
                   </div>
-                  <div className="flex flex-col pt-1">
+                  <div className="flex flex-col min-w-0 pt-0.5">
                     <a
                       href={footer.contact.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-600 leading-snug hover:text-[#36b9b3] transition-colors"
+                      className="text-sm text-gray-600 leading-snug hover:text-[#36b9b3] transition-colors break-words"
                     >
                       {footer.contact.address}
                     </a>
