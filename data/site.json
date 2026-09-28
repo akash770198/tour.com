@@ -1020,7 +1020,7 @@
                 "title": "Tour Packages",
                 "description": "Curated tour packages for family, couples and groups.",
                 "linkText": "Learn More",
-                "href": "/services/tour-packages"
+                "href": "/packages"
               },
               {
                 "icon": "Bus",
@@ -1091,7 +1091,7 @@
                 "description": "We are here to assist you anytime, anywhere in your journey."
               }
             ],
-            "buttonText": "More About Us",
+            "buttonText": "Read More",
             "image1": "/whychoose_tour/img1.jpg",
             "image2": "/whychoose_tour/img2.jpg",
             "image3": "/whychoose_tour/img3.jpg",

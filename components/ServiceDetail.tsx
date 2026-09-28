@@ -95,7 +95,7 @@ export default function ServiceDetail({
                   ))}
                 </div>
 
-                <Link href="#" className="inline-flex items-center gap-3 bg-[#008cba] text-white px-8 py-3.5 rounded-md font-medium hover:bg-[#0d2a4c] transition-colors group">
+                <Link href="/contact" className="inline-flex items-center gap-3 bg-[#008cba] text-white px-8 py-3.5 rounded-md font-medium hover:bg-[#0d2a4c] transition-colors group">
                   {hero.buttonText}
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </Link>
