@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight, Menu, X } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { site, SectionProps, TourHeaderData, TourNavLink } from "@/data";
 
 const socialIcons = {
@@ -13,7 +13,10 @@ const socialIcons = {
   instagram: FaInstagram,
   twitter: FaTwitter,
   linkedin: FaLinkedinIn,
+  youtube: FaYoutube,
 } as const;
+
+type SocialLink = { name: string; icon: keyof typeof socialIcons; href: string };
 
 function pathMatches(pathname: string, href: string) {
   if (!href || href === "#") return false;
@@ -66,7 +69,7 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
           </div>
           <div className="flex items-center h-full">
             <div className="flex items-center space-x-4 pr-6">
-              {topbar.social.map((link) => {
+              {(topbar.social as SocialLink[]).map((link) => {
                 const Icon = socialIcons[link.icon];
                 return (
                   <a
