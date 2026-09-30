@@ -8,6 +8,13 @@ import { MapPin, Clock, Phone, Mail, ChevronDown, ArrowRight, Menu, X } from "lu
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { site, SectionProps, TourHeaderData, TourNavLink } from "@/data";
 
+const socialIcons = {
+  facebook: FaFacebookF,
+  instagram: FaInstagram,
+  twitter: FaTwitter,
+  linkedin: FaLinkedinIn,
+} as const;
+
 function pathMatches(pathname: string, href: string) {
   if (!href || href === "#") return false;
   if (href === "/") return pathname === "/";
@@ -59,10 +66,21 @@ export default function Navbar({ data, className }: SectionProps<TourHeaderData>
           </div>
           <div className="flex items-center h-full">
             <div className="flex items-center space-x-4 pr-6">
-              <Link href="#" className="hover:text-gray-300"><FaFacebookF size={16} /></Link>
-              <Link href="#" className="hover:text-gray-300"><FaInstagram size={16} /></Link>
-              <Link href="#" className="hover:text-gray-300"><FaTwitter size={16} /></Link>
-              <Link href="#" className="hover:text-gray-300"><FaLinkedinIn size={16} /></Link>
+              {topbar.social.map((link) => {
+                const Icon = socialIcons[link.icon];
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.name}
+                    className="hover:text-gray-300"
+                  >
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
             </div>
             <div className="w-px h-4 bg-white/30 mr-6" />
             <div className="flex items-center space-x-2 pr-6">

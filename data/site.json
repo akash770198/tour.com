@@ -294,7 +294,29 @@
             "location": "Explore the World with Tour.com",
             "timing": "Mon - Sat : 09:00 AM - 07:00 PM",
             "phone": "+1 000-000-0000",
-            "email": "info@xyz.com"
+            "email": "info@xyz.com",
+            "social": [
+              {
+                "name": "Facebook",
+                "icon": "facebook",
+                "href": "https://www.facebook.com/"
+              },
+              {
+                "name": "Instagram",
+                "icon": "instagram",
+                "href": "https://www.instagram.com/"
+              },
+              {
+                "name": "Twitter",
+                "icon": "twitter",
+                "href": "https://x.com/"
+              },
+              {
+                "name": "LinkedIn",
+                "icon": "linkedin",
+                "href": "https://www.linkedin.com/"
+              }
+            ]
           }
         }
       },
