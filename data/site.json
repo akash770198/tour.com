@@ -2096,8 +2096,8 @@
               "timing": "Mon - Sat : 09:00 AM - 07:00 PM",
               "email": "info@xyz.com",
               "emailSub": "We reply within 24 hours",
-              "address": "123 Travel Street, Connaught Place, New Delhi - 110001, India",
-              "mapUrl": "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi+110001"
+              "address": "123 Travel Street, New York, NY 10001, USA",
+              "mapUrl": "https://www.google.com/maps/search/?api=1&query=New+York+NY+10001"
             },
             "bottomBar": {
               "copyright": "© 2026 Tour.com. All Rights Reserved.",
@@ -6056,27 +6056,6 @@
                       {
                         "name": "Privacy Policy",
                         "href": "/privacy-policy"
-                      },
-                      {
-                        "name": "Terms & Conditions",
-                        "href": "#"
-                      },
-                      {
-                        "name": "Refund Policy",
-                        "href": "#"
-                      },
-                      {
-                        "name": "Payment Policy",
-                        "href": "#"
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Others",
-                    "links": [
-                      {
-                        "name": "404 Page",
-                        "href": "/page-not-found"
                       }
                     ]
                   }
